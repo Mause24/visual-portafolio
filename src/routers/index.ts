@@ -1,3 +1,1 @@
-export * from "./AdminRouter"
-export * from "./PrivateRouter"
-export * from "./PublicRouter"
+export * from "./GeneralRouter"

@@ -1,24 +1,33 @@
-export const PUBLIC_ROUTES = [
-	{
-		name: "Iniciar Sesion",
-		route: "/login",
-	},
-	{
-		name: "Registro",
-		route: "/register",
-	},
-]
+interface RouteProps {
+	name: string
+	route: string
+	children?: {
+		name: string
+		route: string
+	}[]
+}
 
-export const PRIVATE_ROUTES = [
+export const GENERAL_ROUTES: RouteProps[] = [
 	{
 		name: "Home",
-		route: "/home",
+		route: "/",
+		children: [
+			{
+				name: "Home 2",
+				route: "/link",
+			},
+			{
+				name: "Home 3",
+				route: "/link",
+			},
+		],
+	},
+	{
+		name: "Home 2",
+		route: "/link",
+	},
+	{
+		name: "Home 3",
+		route: "/link",
 	},
 ]
-
-export const ADMIN_ROUTES = [
-	{
-		name: "Admin",
-		route: "/admin",
-	},
-].concat(PRIVATE_ROUTES)

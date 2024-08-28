@@ -4,7 +4,6 @@ import clsx from "clsx"
 import { useState } from "react"
 
 export const Home = (): JSX.Element => {
-	/* const { session } = useAuthStore() */
 	const [data] = useState([
 		{
 			id: 1,
@@ -108,7 +107,7 @@ export const Home = (): JSX.Element => {
 		<div
 			className={clsx(
 				"w-full",
-				"h-[calc(100dvh-290px)]",
+				"h-full",
 				"py-4",
 				"flex",
 				"justify-center",
