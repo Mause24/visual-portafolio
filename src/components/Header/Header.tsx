@@ -12,7 +12,7 @@ export const Header = (props: HeaderProps): JSX.Element => {
 				"w-full",
 				"py-2",
 				"px-3",
-				"bg-header-normal",
+				"bg-dark-backgroundHeader-normal",
 				"text-white",
 				"flex",
 				"justify-between",
@@ -28,7 +28,8 @@ export const Header = (props: HeaderProps): JSX.Element => {
 					width={20}
 					height={20}
 				/>
-				<ul className="flex gap-1 text-text-10 text-sm font-light ml-2 ">
+
+				<ul className="flex gap-3 text-text-10 text-sm font-light ml-2 font-sans">
 					<li>About</li>
 					<li>Experience</li>
 					<li>Skill</li>
@@ -38,7 +39,9 @@ export const Header = (props: HeaderProps): JSX.Element => {
 				</ul>
 			</div>
 			<div className="flex items-center">
-				<RiArrowLeftSLine className="w-6 h-6" />
+				<button type="button">
+					<RiArrowLeftSLine className="w-6 h-6" />
+				</button>
 				<div className="flex items-center gap-2">
 					<a href="">
 						<div className="rounded-full w-3 h-3 bg-red-800" />
