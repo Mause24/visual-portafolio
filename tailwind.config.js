@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	darkMode: 'selector',
+	darkMode: "selector",
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
 		extend: {
 			colors: {
-				light:{
+				light: {
 					primary: {
 						normal: "#007acc",
 					},
@@ -15,8 +15,11 @@ export default {
 					background: {
 						normal: "#f5f5f5",
 					},
+					backgroundHeader: {
+						normal: "#2D3133",
+					},
 				},
-				dark:{
+				dark: {
 					primary: {
 						normal: "#007acc",
 					},
@@ -26,7 +29,10 @@ export default {
 					background: {
 						normal: "#252526",
 					},
-				}
+					backgroundHeader: {
+						normal: "#2D3133",
+					},
+				},
 			},
 		},
 	},
