@@ -1,4 +1,5 @@
 import clsx from "clsx"
+import { AsideNavbar } from "../AsideNavbar"
 import { Footer } from "../Footer"
 import { Header } from "../Header"
 import { LayoutProps } from "./Layout.types"
@@ -10,9 +11,18 @@ export const Layout = (props: LayoutProps): JSX.Element => {
 	return (
 		<>
 			<Header />
-			<main className={clsx("min-h-[calc(100dvh-290px)]", "h-full")}>
-				{children}
-			</main>
+			<div
+				className={clsx(
+					"flex",
+					"min-h-[calc(100dvh-290px)]",
+					"h-full",
+					"bg-light-background-normal",
+					"dark:bg-dark-background-normal"
+				)}
+			>
+				<AsideNavbar />
+				<main className={clsx("flex-1")}>{children}</main>
+			</div>
 			<Footer />
 		</>
 	)

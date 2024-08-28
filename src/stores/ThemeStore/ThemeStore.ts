@@ -8,15 +8,40 @@ export const useThemeStore = create<ThemeStoreProps>((set, get) => {
 
 	const changeTheme = (newTheme: keyof typeof Themes) => {
 		const { theme } = get()
+		console.log("before")
+		console.log(theme)
+
 		document.documentElement.classList.remove(theme)
-		document.documentElement.classList.add(theme)
-		localStorage.setItem("session", newTheme)
+		document.documentElement.classList.add(newTheme)
+		localStorage.setItem("theme", newTheme)
 
 		set({ theme: newTheme })
+		console.log("after")
+		console.log(theme)
+	}
+
+	const toggleTheme = (
+		firstTheme: keyof typeof Themes,
+		secondTheme: keyof typeof Themes
+	) => {
+		try {
+			if (firstTheme === secondTheme)
+				throw new Error("equals themes cannot be toggled")
+			const { theme } = get()
+			if (theme === firstTheme) {
+				changeTheme(secondTheme)
+			} else {
+				changeTheme(firstTheme)
+			}
+		} catch (error) {
+			console.error(error)
+			return firstTheme
+		}
 	}
 
 	return {
 		theme: currentTheme,
 		changeTheme,
+		toggleTheme,
 	}
 })

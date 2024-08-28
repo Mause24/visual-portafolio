@@ -15,6 +15,7 @@ export const useText = <T extends keyof TextTypes>(props: TextProps<T>) => {
 		props: textAttributes,
 		size,
 		color = "primary",
+		className,
 	} = props
 
 	const defaultTextProps: Partial<TextTypes> = {
@@ -45,7 +46,7 @@ export const useText = <T extends keyof TextTypes>(props: TextProps<T>) => {
 		...textAttributes,
 		className: clsx(
 			defaultTextProps[type]?.className ?? "",
-			textAttributes?.className,
+			className,
 			size && TextSizes[size],
 			weight && TextWeights[weight],
 			color && TextColors[color]

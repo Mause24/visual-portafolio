@@ -157,11 +157,12 @@ export enum TextWeights {
 	black = "font-black",
 }
 
-export interface TextProps<T extends keyof TextTypes> {
+export interface TextProps<T extends keyof Omit<TextTypes, "className">> {
 	type: T
 	children: string | React.ReactNode | React.ReactNode[]
-	props?: Partial<TextTypes[T]>
+	props?: Partial<Omit<TextTypes[T], "className">>
 	weight?: keyof typeof TextWeights
 	size?: keyof typeof TextSizes
 	color?: keyof typeof TextColors
+	className?: string
 }
