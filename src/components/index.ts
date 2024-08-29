@@ -1,3 +1,4 @@
+export * from "./Accordion"
 export * from "./AsideNavbar"
 export * from "./Button"
 export * from "./Footer"

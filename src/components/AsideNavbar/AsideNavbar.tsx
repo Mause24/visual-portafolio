@@ -1,64 +1,101 @@
 import { GENERAL_ROUTES } from "@/Constants"
 import clsx from "clsx"
-import { Link } from "react-router-dom"
-import { Text } from "../Text"
+import { LuFiles } from "react-icons/lu"
+import { SiTypescript } from "react-icons/si"
+import { Button } from "../Button"
+import { GroupItem, ItemList } from "./components"
+import { useAsideNavbar } from "./useAsideNavbar"
 
 export const AsideNavbar = () => {
+	const { hadleSideBar, handleOpenGroupItems, menuSideBar, openIndex } =
+		useAsideNavbar()
+
 	return (
 		<aside
 			className={clsx(
-				"flex-[0.4]",
-				"min-w-[250px]",
+				"flex",
 				"bg-light-background-normal",
 				"dark:bg-dark-background-normal"
 			)}
 		>
-			<nav className={clsx("flex", "flex-col", "flex-1", "z-20")}>
+			<div className={clsx("flex", "flex-[0.12]", "justify-center")}>
+				<Button
+					className={clsx(
+						"w-9",
+						"h-9",
+						"pl-2",
+						"relative",
+						menuSideBar &&
+							clsx(
+								"after:content-['']",
+								"after:w-full",
+								"after:h-full",
+								"after:border-l-light-primary-normal",
+								"after:border-l-[3px]",
+								"after:absolute",
+								"after:bottom-0",
+								"after:left-0"
+							)
+					)}
+					variant="transparent"
+					onClick={hadleSideBar}
+				>
+					<LuFiles
+						className={clsx(
+							"w-full",
+							"h-full",
+							"text-light-secondary-alternate",
+							"dark:text-dark-secondary-alternate"
+						)}
+					/>
+				</Button>
+			</div>
+			<nav
+				className={clsx(
+					"flex-col",
+					"flex-1",
+					"z-20",
+					"w-[250px]",
+					menuSideBar ? "flex" : "hidden"
+				)}
+			>
 				<ul
 					className={clsx(
 						"flex",
 						"flex-col",
 						"items-start",
-
-						"px-2",
 						"gap-x-4",
 						"transition-all",
 						"duration-[200ms]"
 					)}
 				>
-					{GENERAL_ROUTES.map(item => (
-						<li
-							key={item.route}
-							className={clsx("flex", "relative")}
-						>
-							<Link
-								/* onClick={toggleMenu} */
-								id={String(item.route)}
-								/* ref={el => (refs.current[index + 1] = el)} */
-								to={item.route}
-								className={clsx(
-									"flex",
-									"w-full",
-									"h-full",
-									"items-center"
-									/* hovering === index + 1
-										? "after:scale-x-100"
-										: "after:scale-x-0" */
-								)}
-							>
-								<Text
-									className={clsx(
-										"text-black",
-										"dark:text-white"
-									)}
-									size="lg"
-									type="span"
-								>
-									{item.name}
-								</Text>
-							</Link>
-						</li>
-					))}
+					{GENERAL_ROUTES.map((item, index) =>
+						Number(item.children?.length) > 0 ? (
+							<GroupItem
+								key={item.route}
+								handleOpen={handleOpenGroupItems(index)}
+								isOpen={index === openIndex}
+								{...item}
+							/>
+						) : (
+							<ItemList
+								className={clsx("flex", "gap-x-1")}
+								icon={
+									<SiTypescript
+										className={clsx(
+											"w-4",
+											"h-4",
+											"text-light-primary-normal",
+											"dark:text-dark-primary-normal"
+										)}
+									/>
+								}
+								key={item.route}
+								name={item.name}
+								route={item.route}
+							/>
+						)
+					)}
 				</ul>
 			</nav>
 		</aside>
