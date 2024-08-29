@@ -9,25 +9,51 @@ interface RouteProps {
 
 export const GENERAL_ROUTES: RouteProps[] = [
 	{
-		name: "Home",
+		name: "About",
 		route: "/",
 		children: [
 			{
-				name: "Home 2",
-				route: "/link",
+				name: "index.html",
+				route: "/index",
 			},
 			{
-				name: "Home 3",
-				route: "/link",
+				name: "experience.css",
+				route: "/experience",
+			},
+			{
+				name: "skils.js",
+				route: "/skills",
+			},
+			{
+				name: "Hobbies.py",
+				route: "/hobbies",
 			},
 		],
 	},
 	{
-		name: "Home 2",
-		route: "/link",
+		name: "Projects",
+		route: "/projects",
+		children: [
+			{
+				name: "project1.tsx",
+				route: "/projects/1",
+			},
+			{
+				name: "project2.html",
+				route: "/projects/2",
+			},
+			{
+				name: "project3.js",
+				route: "/projects/3",
+			},
+		],
 	},
 	{
-		name: "Home 3",
-		route: "/link",
+		name: "contact.txt",
+		route: "/contact",
+	},
+	{
+		name: "support_me.md",
+		route: "/support",
 	},
 ]
