@@ -9,12 +9,12 @@ export const Footer = (): JSX.Element => {
 				"bg-light-primary-normal",
 				"shadow",
 				"px-3",
-				"h-full",
+				"h-6",
 				"w-full"
 			)}
 		>
-			<div className="flex gap-2 justify-between  ">
-				<div className="flex gap-3">
+			<div className="flex gap-2 justify-between items-center  ">
+				<div className="flex gap-3 ">
 					<p className="text-white text-sm">Made in</p>
 					<ul className="flex text-sm gap-3 text-white">
 						<li>ReactJs</li>
