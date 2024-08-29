@@ -14,7 +14,7 @@ export const Layout = (props: LayoutProps): JSX.Element => {
 			<div
 				className={clsx(
 					"flex",
-					"min-h-[calc(100dvh-290px)]",
+					"min-h-[calc(100dvh-48px)]",
 					"h-full",
 					"bg-light-background-normal",
 					"dark:bg-dark-background-normal"

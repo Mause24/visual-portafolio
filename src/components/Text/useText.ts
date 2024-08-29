@@ -19,25 +19,25 @@ export const useText = <T extends keyof TextTypes>(props: TextProps<T>) => {
 	} = props
 
 	const defaultTextProps: Partial<TextTypes> = {
-		b: { className: clsx("font-mono", "text-base") },
-		h1: { className: clsx("font-mono", "text-4xl") },
-		h2: { className: clsx("font-mono", "text-3xl") },
-		h3: { className: clsx("font-mono", "text-3xl") },
-		h4: { className: clsx("font-mono", "text-xl") },
-		h5: { className: clsx("font-mono", "text-xl") },
-		h6: { className: clsx("font-mono", "text-xl") },
+		b: { className: clsx("font-sans", "text-base") },
+		h1: { className: clsx("font-sans", "text-4xl") },
+		h2: { className: clsx("font-sans", "text-3xl") },
+		h3: { className: clsx("font-sans", "text-3xl") },
+		h4: { className: clsx("font-sans", "text-xl") },
+		h5: { className: clsx("font-sans", "text-xl") },
+		h6: { className: clsx("font-sans", "text-xl") },
 		label: {
-			className: clsx("font-mono", "text-base"),
+			className: clsx("font-sans", "text-base"),
 		},
-		p: { className: clsx("font-mono", "text-base") },
+		p: { className: clsx("font-sans", "text-base") },
 		span: {
-			className: clsx("font-mono", "text-base"),
+			className: clsx("font-sans", "text-base"),
 		},
 		strong: {
-			className: clsx("font-mono", "text-base"),
+			className: clsx("font-sans", "text-base"),
 		},
 		legend: {
-			className: clsx("font-mono", "text-base"),
+			className: clsx("font-sans", "text-base"),
 		},
 	}
 

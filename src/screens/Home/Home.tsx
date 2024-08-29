@@ -1,145 +1,104 @@
-import { PaginationView } from "@/components"
-import { usePagination } from "@/hooks"
+import { Card, Text } from "@/components"
 import clsx from "clsx"
-import { useState } from "react"
+import { AiOutlineFileAdd } from "react-icons/ai"
+import { GoFileDirectory } from "react-icons/go"
+import { MdNumbers } from "react-icons/md"
 
 export const Home = (): JSX.Element => {
-	const [data] = useState([
-		{
-			id: 1,
-			name: "Omar",
-		},
-		{
-			id: 2,
-			name: "Angie",
-		},
-		{
-			id: 3,
-			name: "Esteban",
-		},
-		{
-			id: 4,
-			name: "Penecita",
-		},
-		{
-			id: 5,
-			name: "Jean",
-		},
-		{
-			id: 6,
-			name: "Diego",
-		},
-		{
-			id: 7,
-			name: "Brayan",
-		},
-		{
-			id: 8,
-			name: "Pedro",
-		},
-		{
-			id: 9,
-			name: "Alvaro",
-		},
-		{
-			id: 10,
-			name: "Omar 2",
-		},
-		{
-			id: 11,
-			name: "Angie 2",
-		},
-		{
-			id: 12,
-			name: "Esteban 2",
-		},
-		{
-			id: 13,
-			name: "Penecita 2",
-		},
-		{
-			id: 14,
-			name: "Jean 2",
-		},
-		{
-			id: 15,
-			name: "Diego 2",
-		},
-		{
-			id: 16,
-			name: "Brayan 2",
-		},
-		{
-			id: 17,
-			name: "Pedro 2",
-		},
-		{
-			id: 18,
-			name: "Alvaro Ramirez",
-		},
-		{
-			id: 19,
-			name: "Alvaro Ramirez 2",
-		},
-		{
-			id: 20,
-			name: "Alvaro Ramirez",
-		},
-		{
-			id: 21,
-			name: "Alvaro Ramirez 2",
-		},
-	])
-
-	const {
-		pagesNumber,
-		onChangePage,
-		onMoveNext,
-		currentIndex,
-		onMovePrevious,
-		paginatedData,
-	} = usePagination({
-		data,
-		pageSize: 9,
-	})
-
 	return (
 		<div
-			className={clsx(
-				"w-full",
-				"h-full",
-				"py-4",
-				"flex",
-				"justify-center",
-				"items-center"
-			)}
+			className={clsx("w-full", "h-full", "py-4", "flex", "items-center")}
 		>
-			<PaginationView
-				index={currentIndex}
-				renderComponent={item => (
-					<div
-						key={item.id}
-						className={clsx(
-							"w-full",
-							"h-full",
-							"flex",
-							"justify-center",
-							"items-center",
-							"border",
-							"border-black"
-						)}
-					>
-						{item.name}
+			<div className="grid grid-cols-2 ">
+				<div className="flex flex-col gap-6 col-span-1">
+					<div className="flex flex-col ">
+						<h1 className="text-5xl font-sans">Omar arenas</h1>
+						<p className="text-2xl font-sans text-gray-500">
+							Frontend Developer
+						</p>
 					</div>
-				)}
-				cols={3}
-				rows={3}
-				onChangePage={onChangePage}
-				onPressNext={_ => onMoveNext()}
-				onPressPrevious={_ => onMovePrevious()}
-				size={pagesNumber}
-				data={paginatedData}
-			/>
+
+					<div className="flex flex-col gap-2">
+						<p className="text-xl text-gray-300">Start</p>
+						<div className="flex flex-col ">
+							<a href="">
+								<div className="flex items-center gap-2 text-blue-500">
+									<AiOutlineFileAdd size={20} />
+									<Text type="span"> Skills ...</Text>
+								</div>
+							</a>
+
+							<a href="">
+								<div className="flex items-center gap-2 text-blue-500">
+									<GoFileDirectory size={20} />
+									<Text type="span"> Proyects ...</Text>
+								</div>
+							</a>
+							<a href="">
+								<div className="flex items-center gap-2 text-blue-500">
+									<MdNumbers size={20} />
+									<Text type="span"> Anime ...</Text>
+								</div>
+							</a>
+							<a href="">
+								<div className="flex items-center gap-2 text-blue-500">
+									<AiOutlineFileAdd size={20} />
+									<Text type="span"> Get in touch ...</Text>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div className="flex flex-col">
+						<p className="mt-1 mb-1 text-xl text-gray-300">
+							Recent
+						</p>
+						<a href="/experience">
+							<div className="flex gap-x-3">
+								<span className="text-blue-500">Blogs </span>
+								<Text type="span">E:/OmarArenas/Blogs</Text>
+							</div>
+						</a>
+						<a href="/skills">
+							<div className="flex gap-x-3">
+								<span className="text-blue-500">Gaming</span>
+								<Text type="span">E:/OmarArenas/Gaming</Text>
+							</div>
+						</a>
+						<a href="projects">
+							<div className="flex gap-x-3">
+								<span className="text-blue-500">Anime</span>
+								<Text type="span">E:/OmarArenas/Anime</Text>
+							</div>
+						</a>
+						<a href="hobbies">
+							<div className="flex gap-x-3">
+								<span className="text-blue-500">StartUp</span>
+								<Text type="span">E:/OmarArenas/Startup</Text>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div className="flex flex-col justify-center col-span-1">
+					<Text type="span">About</Text>
+					<div className="flex flex-col gap-y-5">
+						<Card
+							path="link"
+							src="https://img.icons8.com/fluency/30/null/linkedin-circled.png"
+							title="Prueba"
+						/>
+						<Card
+							path="git"
+							src="https://img.icons8.com/3d-fluency/28/null/github.png"
+							title="Prueba"
+						/>
+						<Card
+							path="x"
+							src="https://img.icons8.com/color/28/null/twitter--v1.png"
+							title="Prueba"
+						/>
+					</div>
+				</div>
+			</div>
 		</div>
 	)
 }
