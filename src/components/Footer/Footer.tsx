@@ -8,9 +8,9 @@ export const Footer = (): JSX.Element => {
 			className={clsx(
 				"bg-light-primary-normal",
 				"shadow",
-				"px-3",
 				"h-6",
-				"w-full"
+				"w-full",
+				"items-center"
 			)}
 		>
 			<div className="flex gap-2 justify-between items-center  ">

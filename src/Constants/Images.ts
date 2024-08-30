@@ -1,5 +1,5 @@
-import Logo from "@/assets/images/logo.png"
+import Python from "@/assets/images/pythonLogo.png"
 
 export const IMAGES = {
-	logo: Logo,
+	python: Python,
 }

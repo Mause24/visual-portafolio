@@ -2,21 +2,18 @@ import { Text } from "@/components"
 import clsx from "clsx"
 import { Link } from "react-router-dom"
 import { ItemListProps } from "./ItemList.types"
+import { useItemList } from "./useItemList"
 
-export const ItemList = ({
-	name,
-	route,
-	icon,
-	className,
-	leftArrow,
-}: ItemListProps) => {
+export const ItemList = (props: ItemListProps) => {
+	const { Icon, className, name, route } = useItemList(props)
+
 	return (
 		<li className={clsx("flex", "relative", "w-full")}>
 			<Link
 				/* onClick={toggleMenu} */
 				id={String(route)}
 				/* ref={el => (refs.current[index + 1] = el)} */
-				to={route}
+				to={route ?? "/"}
 				className={clsx(
 					"flex",
 					"w-full",
@@ -28,8 +25,7 @@ export const ItemList = ({
 					: "after:scale-x-0" */
 				)}
 			>
-				<div className={clsx("w-3", "h-3")}>{leftArrow}</div>
-				{icon}
+				{Icon}
 				<Text
 					className={clsx(
 						"text-black",
