@@ -37,7 +37,6 @@ export const ItemList = ({
 						"line-clamp-1"
 					)}
 					size="lg"
-					type="span"
 				>
 					{name}
 				</Text>

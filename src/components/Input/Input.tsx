@@ -33,12 +33,12 @@ export const Input = (props: InputProps) => {
 				<Text
 					type="label"
 					size="lg"
+					className={clsx(
+						"font-bold",
+						styleType.label,
+						labelClassname
+					)}
 					props={{
-						className: clsx(
-							"font-bold",
-							styleType.label,
-							labelClassname
-						),
 						htmlFor: id ?? label,
 					}}
 					color={error ? "red" : "primary"}
@@ -73,11 +73,8 @@ export const Input = (props: InputProps) => {
 				(typeof error === "string" ? (
 					<Text
 						color="red"
-						type="span"
 						size="sm"
-						props={{
-							className: clsx("ml-2", "mt-2"),
-						}}
+						className={clsx("ml-2", "mt-2")}
 					>
 						{error}
 					</Text>

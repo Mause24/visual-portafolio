@@ -32,7 +32,6 @@ export const Accordion = ({
 					<>
 						<Text
 							size="lg"
-							type="span"
 							className={clsx(
 								"text-black",
 								"dark:text-white",

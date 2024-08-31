@@ -90,17 +90,14 @@ export const useButton = (props: ButtonProps) => {
 				{label ? (
 					<Text
 						size="xl"
-						type="span"
-						props={{
-							className: clsx(
-								"transition-all",
-								"duration-[200ms]",
-								"ease-linear",
-								disabled
-									? buttonVariantsStyles["disabled"].label
-									: buttonVariantsStyles[variant].label
-							),
-						}}
+						className={clsx(
+							"transition-all",
+							"duration-[200ms]",
+							"ease-linear",
+							disabled
+								? buttonVariantsStyles["disabled"].label
+								: buttonVariantsStyles[variant].label
+						)}
 					>
 						{label}
 					</Text>

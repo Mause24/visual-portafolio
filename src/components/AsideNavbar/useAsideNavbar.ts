@@ -1,7 +1,9 @@
+import { useThemeStore } from "@/stores"
 import { useState } from "react"
 
 export const useAsideNavbar = () => {
 	const [menuSideBar, setMenuSideBar] = useState(true)
+	const { toggleTheme, theme } = useThemeStore()
 	const [openIndex, setOpenIndex] = useState<number>(-1)
 
 	const handleOpenGroupItems = (index: number) => () => {
@@ -20,6 +22,8 @@ export const useAsideNavbar = () => {
 		menuSideBar,
 		openIndex,
 		hadleSideBar,
+		toggleTheme,
+		theme,
 		handleOpenGroupItems,
 	}
 }
