@@ -158,7 +158,7 @@ export enum TextWeights {
 }
 
 export interface TextProps<T extends keyof Omit<TextTypes, "className">> {
-	type: T
+	type?: T
 	children: string | React.ReactNode | React.ReactNode[]
 	props?: Partial<Omit<TextTypes[T], "className">>
 	weight?: keyof typeof TextWeights

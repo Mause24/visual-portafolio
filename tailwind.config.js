@@ -50,6 +50,11 @@ export default {
 						normal: "#E5C365",
 					},
 				},
+				gray: {
+					heavy: "#c9cbce",
+					light: "#ebebeb",
+					xlight: "#f3f3f3",
+				},
 			},
 		},
 	},

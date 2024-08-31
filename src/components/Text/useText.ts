@@ -9,7 +9,7 @@ import {
 
 export const useText = <T extends keyof TextTypes>(props: TextProps<T>) => {
 	const {
-		type,
+		type = "span",
 		children,
 		weight,
 		props: textAttributes,

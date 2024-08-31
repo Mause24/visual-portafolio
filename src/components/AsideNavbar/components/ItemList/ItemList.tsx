@@ -33,7 +33,6 @@ export const ItemList = (props: ItemListProps) => {
 						"line-clamp-1"
 					)}
 					size="lg"
-					type="span"
 				>
 					{name}
 				</Text>
