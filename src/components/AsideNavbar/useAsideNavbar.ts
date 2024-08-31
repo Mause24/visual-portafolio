@@ -20,7 +20,6 @@ export const useAsideNavbar = () => {
 
 	return {
 		menuSideBar,
-		openIndex,
 		hadleSideBar,
 		toggleTheme,
 		theme,
