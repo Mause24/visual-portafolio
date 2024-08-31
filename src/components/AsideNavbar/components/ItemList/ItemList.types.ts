@@ -1,7 +1,5 @@
-export interface ItemListProps {
-	route: string
-	name: string
-	icon?: JSX.Element
-	leftArrow?: JSX.Element
+import { RouteProps } from "@/Constants"
+
+export interface ItemListProps extends RouteProps {
 	className?: string
 }

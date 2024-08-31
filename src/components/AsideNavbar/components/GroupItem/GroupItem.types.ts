@@ -1,10 +1,6 @@
-export interface GroupItemProps {
-	handleOpen: () => void
-	route: string
-	name: string
-	isOpen: boolean
-	children?: {
-		route: string
-		name: string
-	}[]
+import { GroupRouteProps } from "@/Constants"
+
+export interface GroupItemProps extends GroupRouteProps {
+	handleOpen?: () => void
+	isOpen?: boolean
 }

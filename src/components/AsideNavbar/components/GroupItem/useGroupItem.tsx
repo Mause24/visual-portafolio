@@ -1,64 +1,72 @@
-import { HeaderOptions, ItemList } from "@/components"
+import { HeaderOptions, Text } from "@/components"
 import clsx from "clsx"
+import { useState } from "react"
 import { FaChevronDown, FaFolder, FaFolderOpen } from "react-icons/fa"
 import { GroupItemProps } from "./GroupItem.types"
 
 export const useGroupItem = (props: GroupItemProps) => {
-	const { children, isOpen, name, route, handleOpen } = props
+	const { childrens, isOpen, name, handleOpen } = props
+	const [isOpenGroup, setIsOpenGroup] = useState<boolean>(isOpen ?? false)
+
+	const handleOpenGroupItem = () => {
+		setIsOpenGroup(state => !state)
+		handleOpen?.()
+	}
 
 	const renderHeader = ({ isOpen, title }: HeaderOptions) => (
 		<div
 			className={clsx("flex", "justify-start", "items-center", "gap-x-1")}
 		>
-			<ItemList
-				leftArrow={
-					<FaChevronDown
-						className={clsx(
-							"w-3",
-							"h-3",
-							"transition-all",
-							"text-light-secondary-alternate",
-							"dark:text-dark-secondary-alternate",
-							"ease-linear",
-							"duration-200",
-							isOpen ? "rotate-0" : "-rotate-90"
-						)}
-					/>
-				}
-				name={title ?? ""}
-				route={title ?? ""}
-				className={clsx("flex", "gap-x-1")}
-				icon={
-					isOpen ? (
-						<FaFolderOpen
-							className={clsx(
-								"w-4",
-								"h-4",
-								"text-light-yellow-normal",
-								"dark:text-dark-secondary-alternate"
-							)}
-						/>
-					) : (
-						<FaFolder
-							className={clsx(
-								"w-4",
-								"h-4",
-								"text-light-yellow-normal",
-								"dark:text-dark-secondary-alternate"
-							)}
-						/>
-					)
-				}
+			<FaChevronDown
+				className={clsx(
+					"w-3",
+					"h-3",
+					"transition-all",
+					"text-light-secondary-alternate",
+					"dark:text-dark-secondary-alternate",
+					"ease-linear",
+					"duration-200",
+					isOpen ? "rotate-0" : "-rotate-90"
+				)}
 			/>
+			{isOpen ? (
+				<FaFolderOpen
+					className={clsx(
+						"w-4",
+						"h-4",
+						"text-light-yellow-normal",
+						"dark:text-dark-secondary-alternate"
+					)}
+				/>
+			) : (
+				<FaFolder
+					className={clsx(
+						"w-4",
+						"h-4",
+						"text-light-yellow-normal",
+						"dark:text-dark-secondary-alternate"
+					)}
+				/>
+			)}
+			<Text
+				className={clsx(
+					"text-black",
+					"dark:text-white",
+					"line-clamp-1"
+				)}
+				size="lg"
+				type="span"
+			>
+				{title}
+			</Text>
 		</div>
 	)
 
 	return {
 		renderHeader,
-		handleOpen,
-		children,
-		isOpen,
+		childrens,
+		isOpenGroup,
+		handleOpenGroupItem,
 		name,
-		route,
 	}
 }

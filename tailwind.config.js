@@ -5,6 +5,13 @@ export default {
 	theme: {
 		extend: {
 			colors: {
+				extensions: {
+					ts: "#3178c6",
+					js: "#f7df1e",
+					jsx: "#61dbfb",
+					css: "#20639b",
+					html: "#FF5733",
+				},
 				light: {
 					primary: {
 						normal: "#007acc",

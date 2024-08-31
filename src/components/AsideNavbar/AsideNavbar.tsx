@@ -1,14 +1,12 @@
 import { GENERAL_ROUTES } from "@/Constants"
 import clsx from "clsx"
 import { LuFiles } from "react-icons/lu"
-import { SiTypescript } from "react-icons/si"
 import { Button } from "../Button"
 import { GroupItem, ItemList } from "./components"
 import { useAsideNavbar } from "./useAsideNavbar"
 
 export const AsideNavbar = () => {
-	const { hadleSideBar, handleOpenGroupItems, menuSideBar, openIndex } =
-		useAsideNavbar()
+	const { hadleSideBar, menuSideBar } = useAsideNavbar()
 
 	return (
 		<aside
@@ -69,30 +67,14 @@ export const AsideNavbar = () => {
 						"duration-[200ms]"
 					)}
 				>
-					{GENERAL_ROUTES.map((item, index) =>
-						Number(item.children?.length) > 0 ? (
-							<GroupItem
-								key={item.route}
-								handleOpen={handleOpenGroupItems(index)}
-								isOpen={index === openIndex}
-								{...item}
-							/>
+					{GENERAL_ROUTES.map(item =>
+						Number(item.childrens?.length) > 0 ? (
+							<GroupItem key={item.name} {...item} />
 						) : (
 							<ItemList
-								className={clsx("flex", "gap-x-1")}
-								icon={
-									<SiTypescript
-										className={clsx(
-											"w-4",
-											"h-4",
-											"text-light-primary-normal",
-											"dark:text-dark-primary-normal"
-										)}
-									/>
-								}
 								key={item.route}
-								name={item.name}
-								route={item.route}
+								className={clsx("flex", "gap-x-1")}
+								{...item}
 							/>
 						)
 					)}
