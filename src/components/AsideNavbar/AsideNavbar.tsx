@@ -63,7 +63,7 @@ export const AsideNavbar = () => {
 				<Button
 					className={clsx("w-12", "h-12", "p-2")}
 					variant="transparent"
-					onClick={() => toggleTheme("light", "dark")}
+					onClick={() => toggleTheme("dark", "light")}
 				>
 					{theme === "light" ? (
 						<MdOutlineWbSunny
