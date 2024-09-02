@@ -20,7 +20,14 @@ export const Home = (): JSX.Element => {
 			<div className="grid grid-cols-2 ">
 				<div className="flex flex-col gap-6 col-span-1">
 					<div className="flex flex-col ">
-						<Text size="5xl" type="h1">
+						<Text
+							className={clsx(
+								"text-light-secondary-alternate",
+								"dark:text-gray-light"
+							)}
+							size="5xl"
+							type="h1"
+						>
 							Omar arenas
 						</Text>
 						<Text type="p" size="2xl" className="text-gray-500">
@@ -29,7 +36,15 @@ export const Home = (): JSX.Element => {
 					</div>
 
 					<div className="flex flex-col gap-2">
-						<p className="text-xl text-gray-300">Start</p>
+						<Text
+							className={clsx(
+								"mt-1 mb-1 text-xl text-gray-300",
+								"text-gray-500",
+								"dark:text-gray-light"
+							)}
+						>
+							Start
+						</Text>
 						<div className="flex flex-col ">
 							<Link to={"/"}>
 								<div className="flex items-center gap-2 text-blue-500">
@@ -59,37 +74,87 @@ export const Home = (): JSX.Element => {
 						</div>
 					</div>
 					<div className="flex flex-col">
-						<p className="mt-1 mb-1 text-xl text-gray-300">
+						<Text
+							className={clsx(
+								"mt-1 mb-1 text-xl text-gray-300",
+								"text-gray-500",
+								"dark:text-gray-light"
+							)}
+						>
 							Recent
-						</p>
+						</Text>
 						<Link to={"/experience"}>
 							<div className="flex gap-x-3">
-								<span className="text-blue-500">Blogs </span>
-								<Text>E:/OmarArenas/Blogs</Text>
+								<Text type="span" className="text-blue-500">
+									Blogs{" "}
+								</Text>
+								<Text
+									className={clsx(
+										"text-gray-500",
+										"dark:text-gray-light"
+									)}
+								>
+									E:/OmarArenas/Blogs
+								</Text>
 							</div>
 						</Link>
 						<Link to={"/skills"}>
 							<div className="flex gap-x-3">
-								<span className="text-blue-500">Gaming</span>
-								<Text>E:/OmarArenas/Gaming</Text>
+								<Text type="span" className="text-blue-500">
+									Gaming
+								</Text>
+								<Text
+									className={clsx(
+										"text-gray-500",
+										"dark:text-gray-light"
+									)}
+									type="span"
+								>
+									E:/OmarArenas/Gaming
+								</Text>
 							</div>
 						</Link>
 						<Link to={"/projects"}>
 							<div className="flex gap-x-3">
-								<span className="text-blue-500">Anime</span>
-								<Text>E:/OmarArenas/Anime</Text>
+								<Text type="span" className="text-blue-500">
+									Anime
+								</Text>
+								<Text
+									className={clsx(
+										"text-gray-500",
+										"dark:text-gray-light"
+									)}
+								>
+									E:/OmarArenas/Anime
+								</Text>
 							</div>
 						</Link>
 						<Link to={"/hobbies"}>
 							<div className="flex gap-x-3">
-								<span className="text-blue-500">StartUp</span>
-								<Text>E:/OmarArenas/Startup</Text>
+								<Text type="span" className="text-blue-500">
+									StartUp
+								</Text>
+								<Text
+									className={clsx(
+										"text-gray-500",
+										"dark:text-gray-light"
+									)}
+								>
+									E:/OmarArenas/Startup
+								</Text>
 							</div>
 						</Link>
 					</div>
 				</div>
 				<div className="flex flex-col justify-center col-span-1">
-					<Text>About</Text>
+					<Text
+						className={clsx(
+							"text-gray-500",
+							"dark:text-gray-light"
+						)}
+					>
+						About
+					</Text>
 					<div className="flex flex-col gap-y-5">
 						<Card
 							path="link"
