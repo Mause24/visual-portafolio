@@ -34,7 +34,7 @@ export const GENERAL_ROUTES: GroupRouteProps[] = [
 				ext: "css",
 			},
 			{
-				name: "skils.js",
+				name: "skills.js",
 				route: "/skills",
 				ext: "js",
 			},
