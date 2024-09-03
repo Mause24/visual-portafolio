@@ -35,7 +35,7 @@ export const usePaginationView = <T,>(props: PaginationViewProps<T>) => {
 		() =>
 			data
 				.slice(0, cols * rows)
-				.map((item, index) => renderComponent?.(item, index)),
+				.map((item, index) => renderComponent(item, index)),
 		[data, renderComponent]
 	)
 

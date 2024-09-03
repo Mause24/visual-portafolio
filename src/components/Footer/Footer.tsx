@@ -10,25 +10,27 @@ export const Footer = (): JSX.Element => {
 				"shadow",
 				"h-6",
 				"w-full",
-				"items-center"
+				"items-center",
+				"flex",
+				"gap-2",
+				"p-2",
+				"justify-between"
 			)}
 		>
-			<div className="flex gap-2 justify-between items-center  ">
-				<div className="flex gap-3 ">
-					<p className="text-white text-sm">Made in</p>
-					<ul className="flex text-sm gap-3 text-white">
-						<li>ReactJs</li>
-						<li>TypeScript</li>
-						<li>Tailwind</li>
-					</ul>
-				</div>
-				<div>
-					<ul className="flex text-sm gap-3 text-white">
-						<time dateTime="">{currentTime.toLocaleString()}</time>
-						<li>UTF-8</li>
-						<li>Port 443</li>
-					</ul>
-				</div>
+			<div className="flex gap-3 ">
+				<p className="text-white text-sm">Made in</p>
+				<ul className="flex text-sm gap-3 text-white">
+					<li>ReactJs</li>
+					<li>TypeScript</li>
+					<li>Tailwind</li>
+				</ul>
+			</div>
+			<div>
+				<ul className="flex text-sm gap-3 text-white">
+					<time dateTime="">{currentTime.toLocaleString()}</time>
+					<li>UTF-8</li>
+					<li>Port 443</li>
+				</ul>
 			</div>
 		</footer>
 	)
