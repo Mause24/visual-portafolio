@@ -6,7 +6,7 @@ import { HeaderProps } from "./Header.types"
 import { useHeader } from "./useHeader"
 
 export const Header = (props: HeaderProps): JSX.Element => {
-	const {} = useHeader(props)
+	const { t } = useHeader(props)
 
 	return (
 		<header
@@ -35,22 +35,22 @@ export const Header = (props: HeaderProps): JSX.Element => {
 
 				<ul className="flex gap-3 text-text-10 text-sm font-light ml-2 font-sans">
 					<li>
-						<Text size="sm">About</Text>
+						<Text size="sm">{t("header.links.0")}</Text>
 					</li>
 					<li>
-						<Text size="sm">Experience</Text>
+						<Text size="sm">{t("header.links.1")}</Text>
 					</li>
 					<li>
-						<Text size="sm">Skill</Text>
+						<Text size="sm">{t("header.links.2")}</Text>
 					</li>
 					<li>
-						<Text size="sm">Proyects</Text>
+						<Text size="sm">{t("header.links.3")}</Text>
 					</li>
 					<li>
-						<Text size="sm">Contact</Text>
+						<Text size="sm">{t("header.links.4")}</Text>
 					</li>
 					<li>
-						<Text size="sm">Hobbies</Text>
+						<Text size="sm">{t("header.links.5")}</Text>
 					</li>
 				</ul>
 			</div>

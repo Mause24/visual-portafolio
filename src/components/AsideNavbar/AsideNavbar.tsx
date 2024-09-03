@@ -1,6 +1,7 @@
 import { GENERAL_ROUTES } from "@/Constants"
 import clsx from "clsx"
-import { FaRegMoon } from "react-icons/fa"
+import { FaLanguage, FaRegMoon } from "react-icons/fa"
+import { IoLanguage } from "react-icons/io5"
 import { LuFiles } from "react-icons/lu"
 import { MdOutlineWbSunny } from "react-icons/md"
 import { Button } from "../Button"
@@ -8,7 +9,8 @@ import { GroupItem, ItemList } from "./components"
 import { useAsideNavbar } from "./useAsideNavbar"
 
 export const AsideNavbar = () => {
-	const { hadleSideBar, menuSideBar, toggleTheme, theme } = useAsideNavbar()
+	const { hadleSideBar, menuSideBar, toggleTheme, theme, i18next, t } =
+		useAsideNavbar()
 
 	return (
 		<aside
@@ -60,29 +62,58 @@ export const AsideNavbar = () => {
 						)}
 					/>
 				</Button>
-				<Button
-					className={clsx("w-12", "h-12", "p-2")}
-					variant="transparent"
-					onClick={() => toggleTheme("dark", "light")}
-				>
-					{theme === "light" ? (
-						<MdOutlineWbSunny
-							className={clsx(
-								"w-full",
-								"h-full",
-								"text-light-secondary-alternate"
-							)}
-						/>
-					) : (
-						<FaRegMoon
-							className={clsx(
-								"w-full",
-								"h-full",
-								"text-dark-secondary-alternate"
-							)}
-						/>
-					)}
-				</Button>
+				<div className={clsx("flex", "flex-col")}>
+					<Button
+						className={clsx("w-12", "h-12", "p-2")}
+						variant="transparent"
+						onClick={() => toggleTheme("dark", "light")}
+					>
+						{theme === "light" ? (
+							<MdOutlineWbSunny
+								className={clsx(
+									"w-full",
+									"h-full",
+									"text-light-secondary-alternate"
+								)}
+							/>
+						) : (
+							<FaRegMoon
+								className={clsx(
+									"w-full",
+									"h-full",
+									"text-dark-secondary-alternate"
+								)}
+							/>
+						)}
+					</Button>
+					<Button
+						className={clsx("w-12", "h-12", "p-2")}
+						variant="transparent"
+						onClick={() =>
+							i18next.changeLanguage(
+								i18next.language === "es" ? "en" : "es"
+							)
+						}
+					>
+						{i18next.language === "es" ? (
+							<IoLanguage
+								className={clsx(
+									"w-full",
+									"h-full",
+									"text-light-secondary-alternate"
+								)}
+							/>
+						) : (
+							<FaLanguage
+								className={clsx(
+									"w-full",
+									"h-full",
+									"text-dark-secondary-alternate"
+								)}
+							/>
+						)}
+					</Button>
+				</div>
 			</div>
 			<nav
 				className={clsx(
@@ -104,14 +135,24 @@ export const AsideNavbar = () => {
 						"duration-[200ms]"
 					)}
 				>
-					{GENERAL_ROUTES.map(item =>
+					{GENERAL_ROUTES.map((item, index) =>
 						Number(item.childrens?.length) > 0 ? (
-							<GroupItem key={item.name} {...item} />
+							<GroupItem
+								key={item.name}
+								childrens={item.childrens?.map((item, i) => ({
+									name: t(`aside.${index}.childs.${i}`),
+									ext: item.ext,
+									route: item.route,
+								}))}
+								name={t(`aside.${index}.title`)}
+							/>
 						) : (
 							<ItemList
 								key={item.route}
 								className={clsx("flex", "gap-x-1")}
-								{...item}
+								route={item.route}
+								ext={item.ext}
+								name={t(`aside.${index}.title`)}
 							/>
 						)
 					)}

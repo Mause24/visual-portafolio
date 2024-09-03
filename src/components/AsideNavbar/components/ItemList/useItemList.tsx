@@ -16,6 +16,8 @@ import { ItemListProps } from "./ItemList.types"
 export const useItemList = (props: ItemListProps) => {
 	const { name, className, ext, route } = props
 
+	const title = useMemo(() => (ext ? name + "." + ext : name), [name, ext])
+
 	const Icon = useMemo(() => {
 		switch (ext) {
 			case "css":
@@ -93,9 +95,9 @@ export const useItemList = (props: ItemListProps) => {
 	}, [ext])
 
 	return {
-		name,
 		className,
 		Icon,
+		title,
 		route,
 	}
 }

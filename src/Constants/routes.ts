@@ -34,7 +34,7 @@ export const GENERAL_ROUTES: GroupRouteProps[] = [
 				ext: "css",
 			},
 			{
-				name: "skils.js",
+				name: "skills.js",
 				route: "/skills",
 				ext: "js",
 			},
@@ -62,6 +62,11 @@ export const GENERAL_ROUTES: GroupRouteProps[] = [
 			{
 				name: "project3.ts",
 				route: "/projects/3",
+				ext: "ts",
+			},
+			{
+				name: "project4.ts",
+				route: "/projects/4",
 				ext: "ts",
 			},
 		],

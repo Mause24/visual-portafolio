@@ -1,0 +1,28 @@
+{
+	"header": {
+		"links": [
+			"About",
+			"Experience",
+			"Skills",
+			"Projects",
+			"Contact",
+			"Hobbies"
+		]
+	},
+	"aside": [
+		{
+			"title": "About",
+			"childs": ["index", "experience", "skills", "hobbies"]
+		},
+		{
+			"title": "Projects",
+			"childs": ["project1", "project2", "project3", "project4"]
+		},
+		{
+			"title": "Contact"
+		},
+		{
+			"title": "support_me"
+		}
+	]
+}

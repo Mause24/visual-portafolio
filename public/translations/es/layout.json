@@ -1,0 +1,28 @@
+{
+	"header": {
+		"links": [
+			"Sobre mi",
+			"Experiencia",
+			"Habilidades",
+			"Proyectos",
+			"Hablemos",
+			"Hobbies"
+		]
+	},
+	"aside": [
+		{
+			"title": "Sobre mi",
+			"childs": ["index", "Experiencia", "Habilidades", "Hobbies"]
+		},
+		{
+			"title": "Proyectos",
+			"childs": ["Proyecto 1", "Proyecto 2", "Proyecto 3", "Proyecto 4"]
+		},
+		{
+			"title": "Hablemos"
+		},
+		{
+			"title": "Apoyame!"
+		}
+	]
+}
