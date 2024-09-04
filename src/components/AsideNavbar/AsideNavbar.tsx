@@ -1,4 +1,3 @@
-import { GENERAL_ROUTES } from "@/Constants"
 import clsx from "clsx"
 import { FaLanguage, FaRegMoon } from "react-icons/fa"
 import { IoLanguage } from "react-icons/io5"
@@ -9,7 +8,7 @@ import { GroupItem, ItemList } from "./components"
 import { useAsideNavbar } from "./useAsideNavbar"
 
 export const AsideNavbar = () => {
-	const { hadleSideBar, menuSideBar, toggleTheme, theme, i18next, t } =
+	const { hadleSideBar, menuSideBar, toggleTheme, theme, i18next, routes } =
 		useAsideNavbar()
 
 	return (
@@ -135,24 +134,14 @@ export const AsideNavbar = () => {
 						"duration-[200ms]"
 					)}
 				>
-					{GENERAL_ROUTES.map((item, index) =>
+					{routes.map(item =>
 						Number(item.childrens?.length) > 0 ? (
-							<GroupItem
-								key={item.name}
-								childrens={item.childrens?.map((item, i) => ({
-									name: t(`aside.${index}.childs.${i}`),
-									ext: item.ext,
-									route: item.route,
-								}))}
-								name={t(`aside.${index}.title`)}
-							/>
+							<GroupItem key={item.name} {...item} />
 						) : (
 							<ItemList
 								key={item.route}
 								className={clsx("flex", "gap-x-1")}
-								route={item.route}
-								ext={item.ext}
-								name={t(`aside.${index}.title`)}
+								{...item}
 							/>
 						)
 					)}
