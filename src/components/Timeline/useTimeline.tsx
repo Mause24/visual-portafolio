@@ -1,5 +1,6 @@
 import clsx from "clsx"
 import { useMemo } from "react"
+import { GoGoal } from "react-icons/go"
 import { TimelineProps } from "./Timeline.types"
 import styles from "./_styles.module.scss"
 import { TimelineItem, TimelineItemProps } from "./components"
@@ -111,7 +112,16 @@ export const useTimeline = <T extends TimelineItemProps>(
 									"items-center"
 								)}
 							>
-								{item.icon}
+								{item.icon ?? (
+									<GoGoal
+										className={clsx(
+											"w-full",
+											"h-full",
+											"text-white",
+											"dark:text-white"
+										)}
+									/>
+								)}
 							</div>
 							{renderComponent?.(item, index) ?? (
 								<TimelineItem {...item} />
