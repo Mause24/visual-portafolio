@@ -17,7 +17,7 @@ export const Layout = (props: LayoutProps): JSX.Element => {
 					"min-h-[calc(100dvh-48px)]",
 					"h-full",
 					"bg-light-background-normal",
-					"dark:bg-dark-background-normal"
+					"dark:bg-light-secondary-normal"
 				)}
 			>
 				<AsideNavbar />

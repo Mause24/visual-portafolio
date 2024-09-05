@@ -12,13 +12,7 @@ export const AsideNavbar = () => {
 		useAsideNavbar()
 
 	return (
-		<aside
-			className={clsx(
-				"flex",
-				"bg-gray-light",
-				"dark:bg-dark-background-normal"
-			)}
-		>
+		<aside className={clsx("flex")}>
 			<div
 				className={clsx(
 					"flex",
@@ -26,7 +20,7 @@ export const AsideNavbar = () => {
 					"justify-between",
 					"flex-[0.12]",
 					"justify-center",
-					"dark:bg-dark-background-normal",
+					"dark:bg-light-secondary-aside",
 					"bg-gray-xlight",
 					"shadow"
 				)}
@@ -57,7 +51,9 @@ export const AsideNavbar = () => {
 							"w-full",
 							"h-full",
 							"text-light-secondary-alternate",
-							"dark:text-dark-secondary-alternate"
+							menuSideBar
+								? clsx("dark:text-gray-xlight")
+								: clsx("dark:text-gray-heavy")
 						)}
 					/>
 				</Button>
@@ -80,7 +76,7 @@ export const AsideNavbar = () => {
 								className={clsx(
 									"w-full",
 									"h-full",
-									"text-dark-secondary-alternate"
+									"text-gray-heavy"
 								)}
 							/>
 						)}
@@ -121,6 +117,8 @@ export const AsideNavbar = () => {
 					"z-20",
 					"pl-2",
 					"w-[250px]",
+					"bg-gray-light",
+					"dark:bg-light-secondary-navBar",
 					menuSideBar ? "flex" : "hidden"
 				)}
 			>
