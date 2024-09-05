@@ -3,22 +3,54 @@
 		{
 			"id": 1,
 			"title": "Full Stack Developer",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae libero dolorum ratione vel iusto quam possimus nisi ea unde corrupti?"
+			"startDate": "11-01-2022",
+			"endDate": "12-19-2023",
+			"description": [
+				"Feature Development: Create new features for web and mobile apps using React and React Native, ensuring code quality and adherence to best practices.",
+				"Bug Fixing: Identify and resolve issues promptly to maintain application stability and user satisfaction",
+				"Version Control: Utilize Git for version control, managing branches effectively and ensuring code consistency across the team",
+				"Deployment Automation: Implement CI/CD pipelines to automate build, test, and deployment processes, ensuring reliable deployments across environments.",
+				"Security and Performance Optimization: Prioritize security measures and optimize performance to safeguard user data and deliver a seamless user experience."
+			]
 		},
 		{
 			"id": 2,
 			"title": "React Native Developer",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae libero dolorum ratione vel iusto quam possimus nisi ea unde corrupti?"
+			"startDate": "06-01-2022",
+			"endDate": "11-01-2022",
+			"description": [
+				"Complex Application Development: Design and develop robust, scalable, and sustainable applications, ensuring they are adaptable to future requirements.",
+				"Reusable Components: Create and maintain reusable components to streamline development, standardize UI elements, and ensure consistency across views.",
+				"Service Integration: Integrate and manage services like Firebase for continuous error tracking and improved stability and performance.",
+				"Architectural Optimization: Optimize and modularize internal architecture, focusing on clean code and well-defined modules to enhance long-term maintainability and scalability."
+			]
 		},
 		{
 			"id": 3,
 			"title": "Front End Lead",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae libero dolorum ratione vel iusto quam possimus nisi ea unde corrupti?"
+			"startDate": "09-21-2021",
+			"endDate": "05-31-2023",
+			"description": [
+				"Web and App Development: Develop websites and applications using modern frameworks such as React.js, React Native, and Next.js, creating efficient and scalable solutions tailored to customer needs.",
+				"Reusable Components: Design and implement reusable and dynamic components, standardizing the construction of websites and applications to enhance consistency and accelerate development.",
+				"Maintenance and Troubleshooting: Maintain and troubleshoot websites and applications, ensuring optimal performance and delivering a smooth user experience with quick and effective solutions.",
+				"Version Control: Manage development tools like GitHub, Git, and Azure, coordinating version control to facilitate team collaboration throughout the project lifecycle.",
+				"Technical Support: Provide technical support and resolve bugs, delivering fast fixes to maintain the stability and reliability of applications and websites.",
+				"Deployment: Implement and deploy applications and websites on servers, ensuring proper configuration and optimal performance for end users."
+			]
 		},
 		{
 			"id": 4,
 			"title": "Freelance Developer",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae libero dolorum ratione vel iusto quam possimus nisi ea unde corrupti?"
+			"startDate": "10-01-2019",
+			"endDate": "10-01-2020",
+			"description": [
+				"Web Views Development: Develop web views using HTML, CSS, and JavaScript, creating visually appealing and functional interfaces that adhere to current standards and deliver an optimal user experience.",
+				"Template Structuring: Structure base templates for websites, establishing a solid foundation for content and additional functionalities, ensuring consistency and scalability.",
+				"Component Creation and Modification: Create and modify website components, adapting and optimizing elements according to project requirements to improve performance and integration.",
+				"Client Requirement Fulfillment: Accurately fulfill client requirements, ensuring solutions align with expectations, delivered on time, and supported by clear communication throughout the process."
+			]
 		}
-	]
+	],
+	"defaultPresentDate": "Present"
 }

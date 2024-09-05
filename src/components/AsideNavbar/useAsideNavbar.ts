@@ -7,8 +7,8 @@ export const useAsideNavbar = () => {
 	const [menuSideBar, setMenuSideBar] = useState(true)
 	const { toggleTheme, theme } = useThemeStore()
 	const [t, i18next] = useTranslation("layout")
-	const routes = useMemo(
-		() => t("aside", { returnObjects: true }) as GroupRouteProps[],
+	const routes: GroupRouteProps[] = useMemo(
+		() => t("aside", { returnObjects: true }),
 		[t("aside")]
 	)
 

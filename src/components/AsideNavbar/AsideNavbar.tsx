@@ -107,7 +107,7 @@ export const AsideNavbar = () => {
 								className={clsx(
 									"w-full",
 									"h-full",
-									"text-dark-secondary-alternate"
+									"text-light-secondary-alternate"
 								)}
 							/>
 						)}
@@ -128,6 +128,7 @@ export const AsideNavbar = () => {
 					className={clsx(
 						"flex",
 						"flex-col",
+						"list-none",
 						"items-start",
 						"gap-x-4",
 						"transition-all",
