@@ -38,6 +38,7 @@ export const PaginationBar = (props: PaginationBarsProps) => {
 			<ul
 				className={clsx(
 					"flex",
+					"list-none",
 					"overflow-hidden",
 					paginationBarVariantsStyles[variants].itemButtonsContainer
 				)}

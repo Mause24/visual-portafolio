@@ -19,14 +19,14 @@ export const Footer = (): JSX.Element => {
 		>
 			<div className="flex gap-3 ">
 				<p className="text-white text-sm">Made in</p>
-				<ul className="flex text-sm gap-3 text-white">
+				<ul className="flex text-sm gap-3 list-none text-white">
 					<li>ReactJs</li>
 					<li>TypeScript</li>
 					<li>Tailwind</li>
 				</ul>
 			</div>
 			<div>
-				<ul className="flex text-sm gap-3 text-white">
+				<ul className="flex text-sm gap-3 list-none text-white">
 					<time dateTime="">{currentTime.toLocaleString()}</time>
 					<li>UTF-8</li>
 					<li>Port 443</li>

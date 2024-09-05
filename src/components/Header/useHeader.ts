@@ -5,8 +5,8 @@ import { HeaderLinks, HeaderProps } from "./Header.types"
 export const useHeader = (props: HeaderProps) => {
 	const [t] = useTranslation("layout")
 
-	const links = useMemo(
-		() => t("header.links", { returnObjects: true }) as HeaderLinks[],
+	const links: HeaderLinks[] = useMemo(
+		() => t("header.links", { returnObjects: true }),
 		[t("header.links")]
 	)
 

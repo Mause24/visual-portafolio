@@ -44,7 +44,6 @@ export const useTimeline = <T extends TimelineItemProps>(
 						? clsx("max-w-screen", "overflow-x-auto")
 						: clsx("flex-col", "max-h-screen", "overflow-y-auto"),
 					className
-					//LINE
 				)}
 			>
 				{data.map((item, index) => {
@@ -55,13 +54,12 @@ export const useTimeline = <T extends TimelineItemProps>(
 								"w-[50%]",
 								"h-full",
 								"flex",
-								"justify-center",
 								"items-center",
 								"flex-shrink-0",
 								"relative",
 								isPair
-									? clsx("left-0", "pr-9")
-									: clsx("left-2/4", "pl-9"),
+									? clsx("left-0", "pr-9", "justify-end")
+									: clsx("left-2/4", "pl-9", "justify-start"),
 								styles.scrollComponent,
 								horizontal ? styles.xAxis : styles.yAxis,
 								animationArray,

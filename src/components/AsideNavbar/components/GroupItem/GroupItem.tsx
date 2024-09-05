@@ -16,7 +16,7 @@ export const GroupItem = (props: GroupItemProps) => {
 			key={name}
 			title={name}
 		>
-			<ul className={clsx("ml-4")}>
+			<ul className={clsx("list-none", "ml-4")}>
 				{childrens?.map(item => (
 					<ItemList
 						className={clsx("flex", "gap-x-1")}
