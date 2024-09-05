@@ -5,7 +5,7 @@ import { ItemListProps } from "./ItemList.types"
 import { useItemList } from "./useItemList"
 
 export const ItemList = (props: ItemListProps) => {
-	const { Icon, className, name, route } = useItemList(props)
+	const { Icon, className, title, route } = useItemList(props)
 
 	return (
 		<li className={clsx("flex", "relative", "w-full")}>
@@ -32,9 +32,8 @@ export const ItemList = (props: ItemListProps) => {
 						"dark:text-white",
 						"line-clamp-1"
 					)}
-					size="lg"
 				>
-					{name}
+					{title}
 				</Text>
 			</Link>
 		</li>

@@ -1,18 +1,16 @@
+import { GroupRouteProps } from "@/Constants"
 import { useThemeStore } from "@/stores"
-import { useState } from "react"
+import { useMemo, useState } from "react"
+import { useTranslation } from "react-i18next"
 
 export const useAsideNavbar = () => {
 	const [menuSideBar, setMenuSideBar] = useState(true)
 	const { toggleTheme, theme } = useThemeStore()
-	const [openIndex, setOpenIndex] = useState<number>(-1)
-
-	const handleOpenGroupItems = (index: number) => () => {
-		if (openIndex === index) {
-			setOpenIndex(-1)
-		} else {
-			setOpenIndex(index)
-		}
-	}
+	const [t, i18next] = useTranslation("layout")
+	const routes = useMemo(
+		() => t("aside", { returnObjects: true }) as GroupRouteProps[],
+		[t("aside")]
+	)
 
 	const hadleSideBar = () => {
 		setMenuSideBar(state => !state)
@@ -23,6 +21,7 @@ export const useAsideNavbar = () => {
 		hadleSideBar,
 		toggleTheme,
 		theme,
-		handleOpenGroupItems,
+		routes,
+		i18next,
 	}
 }

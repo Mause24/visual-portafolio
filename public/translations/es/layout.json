@@ -1,0 +1,75 @@
+{
+	"header": {
+		"links": [
+			{ "id": 1, "name": "Sobre mi" },
+			{ "id": 2, "name": "Experiencia" },
+			{ "id": 3, "name": "Habilidades" },
+			{ "id": 4, "name": "Proyectos" },
+			{ "id": 5, "name": "Hablemos" },
+			{ "id": 6, "name": "Hobbies" }
+		]
+	},
+	"aside": [
+		{
+			"name": "Sobre mi",
+			"childrens": [
+				{
+					"name": "index",
+					"route": "/",
+					"ext": "html"
+				},
+				{
+					"name": "Sobre mi",
+					"route": "/experience",
+					"ext": "css"
+				},
+				{
+					"name": "Habilidades",
+					"route": "/skills",
+					"ext": "js"
+				},
+				{
+					"name": "Hobbies",
+					"route": "/hobbies",
+					"ext": "py"
+				}
+			]
+		},
+		{
+			"name": "Proyectos",
+			"route": "/projects",
+			"childrens": [
+				{
+					"name": "Proyecto 1",
+					"route": "/projects/1",
+					"ext": "tsx"
+				},
+				{
+					"name": "Proyecto 2",
+					"route": "/projects/2",
+					"ext": "jsx"
+				},
+				{
+					"name": "Proyecto 3",
+					"route": "/projects/3",
+					"ext": "ts"
+				},
+				{
+					"name": "Proyecto 4",
+					"route": "/projects/4",
+					"ext": "ts"
+				}
+			]
+		},
+		{
+			"name": "Hablemos",
+			"route": "/contact",
+			"ext": "txt"
+		},
+		{
+			"name": "Apoyame!",
+			"route": "/support",
+			"ext": "md"
+		}
+	]
+}

@@ -54,7 +54,6 @@ export const useGroupItem = (props: GroupItemProps) => {
 					"dark:text-white",
 					"line-clamp-1"
 				)}
-				size="lg"
 				type="span"
 			>
 				{title}
