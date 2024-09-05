@@ -58,8 +58,21 @@ export const useTimeline = <T extends TimelineItemProps>(
 								"flex-shrink-0",
 								"relative",
 								isPair
-									? clsx("left-0", "pr-9", "justify-end")
+									? clsx(
+											"left-0",
+											"pr-9",
+											"justify-end",
+											//RESPONSIVE
+											"max-md:pr-0"
+										)
 									: clsx("left-2/4", "pl-9", "justify-start"),
+								//RESPONSIVE
+								clsx(
+									"max-md:left-7",
+									"max-md:w-[calc(100%-28px)]",
+									"max-md:pl-9",
+									"max-md:justify-start"
+								),
 								styles.scrollComponent,
 								horizontal ? styles.xAxis : styles.yAxis,
 								animationArray,
@@ -73,7 +86,13 @@ export const useTimeline = <T extends TimelineItemProps>(
 											"before:border-l-[15px]",
 											"before:border-l-gray-light",
 											"before:dark:border-l-dark-secondary-alternate",
-											"before:right-[21px]"
+											"before:right-[21px]",
+											//RESPONSIVE
+											"max-md:after:-left-[3px]",
+											"max-md:before:left-[21px]",
+											"max-md:before:border-l-0",
+											"max-md:before:right-full",
+											"max-md:before:border-r-[15px]"
 										)
 									: clsx(
 											"after:left-0",
@@ -81,7 +100,11 @@ export const useTimeline = <T extends TimelineItemProps>(
 											"before:border-r-[15px]",
 											"before:border-r-gray-light",
 											"before:dark:border-r-dark-secondary-alternate",
-											"before:left-[21px]"
+											"before:left-[21px]",
+											//RESPONSIVE
+											"max-md:after:left-0",
+											"max-md:before:left-[21px]",
+											"max-md:before:border-r-[15px]"
 										),
 								"before:content-['']",
 								"before:absolute",
@@ -100,14 +123,18 @@ export const useTimeline = <T extends TimelineItemProps>(
 									"h-10",
 									"rounded-full",
 									"p-1",
-									isPair ? "-right-[20px]" : "-left-[20px]",
+									isPair
+										? clsx("-right-[20px]")
+										: clsx("-left-[20px]"),
 									"top-[50%]",
 									"bg-dark-primary-highlight",
 									"dark:bg-dark-secondary-alternate",
 									"z-[1]",
 									"flex",
 									"justify-center",
-									"items-center"
+									"items-center",
+									//RESPONSIVE
+									"max-md:-left-5"
 								)}
 							>
 								{item.icon ?? (

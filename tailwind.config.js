@@ -18,6 +18,9 @@ export default {
 					},
 					secondary: {
 						normal: "#1e1e1e",
+						aside: "#333333",
+						navBar: "#252525",
+						header: "#3c3c3c",
 						alternate: "#0e0e0e",
 						highlight: "#37373e",
 					},

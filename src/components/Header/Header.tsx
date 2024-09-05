@@ -15,7 +15,7 @@ export const Header = (props: HeaderProps): JSX.Element => {
 				"py-2",
 				"px-3",
 				"bg-gray-heavy",
-				"dark:bg-dark-background-normal",
+				"dark:bg-light-secondary-header",
 				"dark:text-white",
 				"text-black",
 				"flex",
