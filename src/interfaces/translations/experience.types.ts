@@ -1,5 +1,7 @@
 export interface Experience {
 	id: number
 	title: string
-	description: string
+	description: string[]
+	startDate: string
+	endDate?: string
 }

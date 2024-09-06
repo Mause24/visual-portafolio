@@ -19,17 +19,17 @@
 					"ext": "html"
 				},
 				{
-					"name": "Sobre mi",
+					"name": "sobre_mi",
 					"route": "/experience",
 					"ext": "css"
 				},
 				{
-					"name": "Habilidades",
+					"name": "habilidades",
 					"route": "/skills",
 					"ext": "js"
 				},
 				{
-					"name": "Hobbies",
+					"name": "hobbies",
 					"route": "/hobbies",
 					"ext": "py"
 				}
@@ -40,34 +40,34 @@
 			"route": "/projects",
 			"childrens": [
 				{
-					"name": "Proyecto 1",
+					"name": "proyecto_1",
 					"route": "/projects/1",
 					"ext": "tsx"
 				},
 				{
-					"name": "Proyecto 2",
+					"name": "proyecto_2",
 					"route": "/projects/2",
 					"ext": "jsx"
 				},
 				{
-					"name": "Proyecto 3",
+					"name": "proyecto_3",
 					"route": "/projects/3",
 					"ext": "ts"
 				},
 				{
-					"name": "Proyecto 4",
+					"name": "proyecto_4",
 					"route": "/projects/4",
 					"ext": "ts"
 				}
 			]
 		},
 		{
-			"name": "Hablemos",
+			"name": "hablemos",
 			"route": "/contact",
 			"ext": "txt"
 		},
 		{
-			"name": "Apoyame!",
+			"name": "apoyame!",
 			"route": "/support",
 			"ext": "md"
 		}

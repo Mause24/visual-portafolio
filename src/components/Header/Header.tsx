@@ -15,7 +15,7 @@ export const Header = (props: HeaderProps): JSX.Element => {
 				"py-2",
 				"px-3",
 				"bg-gray-heavy",
-				"dark:bg-dark-background-normal",
+				"dark:bg-light-secondary-header",
 				"dark:text-white",
 				"text-black",
 				"flex",
@@ -33,7 +33,7 @@ export const Header = (props: HeaderProps): JSX.Element => {
 					height={20}
 				/>
 
-				<ul className="flex gap-3 text-text-10 text-sm font-light ml-2 font-sans">
+				<ul className="flex gap-3 list-none text-text-10 text-sm font-light ml-2 font-sans">
 					{links.map(item => (
 						<li key={item.id}>
 							<Text size="sm">{item.name}</Text>
