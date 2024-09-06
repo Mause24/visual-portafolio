@@ -19,7 +19,7 @@ import {
 import { TbBrandReactNative } from "react-icons/tb"
 export const Skills = () => {
 	return (
-		<div className="flex flex-col gap-y-5 px-5 py-4 overflow-y-auto">
+		<div className="flex flex-col gap-y-5 px-5 py-4 max-h-screen overflow-y-auto">
 			<Text type="h1" className="font-sans dark:text-gray-500 text-black">
 				Skills
 			</Text>
