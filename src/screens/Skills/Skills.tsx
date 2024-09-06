@@ -19,7 +19,7 @@ import {
 import { TbBrandReactNative } from "react-icons/tb"
 export const Skills = () => {
 	return (
-		<div className="flex flex-col gap-y-5 px-5 py-4">
+		<div className="flex flex-col gap-y-5 px-5 py-4 overflow-y-auto">
 			<Text type="h1" className="font-sans dark:text-gray-500 text-black">
 				Skills
 			</Text>
@@ -28,7 +28,7 @@ export const Skills = () => {
 					Lenguages
 				</Text>
 			</div>
-			<div className="lg:flex lg:flex-row lg:gap-x-10 flex-col gap-y-3 ">
+			<div className="lg:flex lg:flex-row lg:gap-x-10 flex flex-col gap-y-5 ">
 				<div className="flex  items-center gap-6">
 					<SiJavascript className="text-extensions-js" size={48} />
 					<Text type="p" className="font-sans dark:text-white">
@@ -59,7 +59,7 @@ export const Skills = () => {
 					Frameworks
 				</Text>
 			</div>
-			<div className="lg:flex lg:flex-row lg:gap-x-10 flex-col">
+			<div className="lg:flex lg:flex-row lg:gap-x-10 flex flex-col gap-y-5">
 				<div className="flex  items-center gap-6">
 					<FaReact className="text-extensions-jsx" size={48} />
 					<Text type="p" className="font-sans dark:text-white">
@@ -100,7 +100,7 @@ export const Skills = () => {
 					Tools
 				</Text>
 			</div>
-			<div className="lg:flex lg:flex-row lg:gap-x-10 flex-col">
+			<div className="lg:flex lg:flex-row lg:gap-x-10 flex flex-col gap-y-5">
 				<div className="flex  items-center gap-6">
 					<SiVisualstudiocode
 						className="text-extensions-jsx"
@@ -152,7 +152,7 @@ export const Skills = () => {
 					libraries
 				</Text>
 			</div>
-			<div className="lg:flex lg:flex-row lg:gap-x-10 flex-col">
+			<div className="lg:flex lg:flex-row lg:gap-x-10 flex flex-col gap-y-5 ">
 				<div className="flex  items-center gap-6">
 					<img
 						src={IMAGES.axios}
@@ -194,7 +194,7 @@ export const Skills = () => {
 					Mobile
 				</Text>
 			</div>
-			<div className="lg:flex lg:flex-row lg:gap-x-10 flex-col">
+			<div className="lg:flex lg:flex-row lg:gap-x-10 flex flex-col gap-y-5">
 				<div className="flex  items-center gap-6">
 					<TbBrandReactNative
 						className="text-extensions-jsx"
