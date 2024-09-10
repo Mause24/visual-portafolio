@@ -92,7 +92,8 @@ export const useTimeline = <T extends TimelineItemProps>(
 											"max-md:before:left-[21px]",
 											"max-md:before:border-l-0",
 											"max-md:before:right-full",
-											"max-md:before:border-r-[15px]"
+											"max-md:before:border-r-[15px]",
+											"max-md:before:dark:border-r-dark-secondary-alternate"
 										)
 									: clsx(
 											"after:left-0",
