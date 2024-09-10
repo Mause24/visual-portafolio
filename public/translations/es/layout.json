@@ -71,5 +71,35 @@
 			"route": "/support",
 			"ext": "md"
 		}
+	],
+	"settings": [
+		{
+			"label": "Idiomas",
+			"value": "lan",
+			"childs": [
+				{
+					"label": "Español",
+					"value": "es"
+				},
+				{
+					"label": "Ingles",
+					"value": "en"
+				}
+			]
+		},
+		{
+			"label": "Temas",
+			"value": "th",
+			"childs": [
+				{
+					"label": "Claro",
+					"value": "light"
+				},
+				{
+					"label": "Oscuro",
+					"value": "dark"
+				}
+			]
+		}
 	]
 }

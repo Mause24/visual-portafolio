@@ -3,13 +3,23 @@ import { FaLanguage, FaRegMoon } from "react-icons/fa"
 import { IoLanguage } from "react-icons/io5"
 import { LuFiles } from "react-icons/lu"
 import { MdOutlineWbSunny } from "react-icons/md"
+import { VscSettingsGear } from "react-icons/vsc"
 import { Button } from "../Button"
+import { Dropdown } from "../DropDown"
 import { GroupItem, ItemList } from "./components"
 import { useAsideNavbar } from "./useAsideNavbar"
-
 export const AsideNavbar = () => {
-	const { hadleSideBar, menuSideBar, toggleTheme, theme, i18next, routes } =
-		useAsideNavbar()
+	const {
+		hadleSideBar,
+		menuSideBar,
+		toggleTheme,
+		theme,
+		i18next,
+		routes,
+		isOpenSettings,
+		toggleSettingsDropdown,
+		settings,
+	} = useAsideNavbar()
 
 	return (
 		<aside className={clsx("flex")}>
@@ -22,7 +32,8 @@ export const AsideNavbar = () => {
 					"justify-center",
 					"dark:bg-light-secondary-aside",
 					"bg-gray-xlight",
-					"shadow"
+					"shadow",
+					"relative"
 				)}
 			>
 				<Button
@@ -108,6 +119,17 @@ export const AsideNavbar = () => {
 							/>
 						)}
 					</Button>
+					<div className="flex justify-center items-center z-[10]">
+						<Dropdown
+							items={settings}
+							isOpen={isOpenSettings}
+							key={String(isOpenSettings)}
+						>
+							<Button onClick={toggleSettingsDropdown}>
+								<VscSettingsGear />
+							</Button>
+						</Dropdown>
+					</div>
 				</div>
 			</div>
 			<nav
@@ -119,6 +141,7 @@ export const AsideNavbar = () => {
 					"w-[250px]",
 					"bg-gray-light",
 					"dark:bg-light-secondary-navBar",
+					"z-0",
 					menuSideBar ? "flex" : "hidden"
 				)}
 			>
