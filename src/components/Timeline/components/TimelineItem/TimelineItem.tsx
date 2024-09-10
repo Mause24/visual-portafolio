@@ -24,7 +24,8 @@ export const TimelineItem = (props: TimelineItemProps) => {
 				"bg-gray-light",
 				"dark:bg-dark-secondary-alternate",
 				"rounded-xl",
-				"shadow-lg"
+				"shadow-lg",
+				"max-md:max-h-[90%]"
 			)}
 		>
 			<div
@@ -34,14 +35,15 @@ export const TimelineItem = (props: TimelineItemProps) => {
 					className={clsx(
 						"text-black",
 						"dark:text-white",
-						"font-bold"
+						"font-bold",
+						"max-md:text-lg"
 					)}
 					type="h3"
 					size="xl"
 				>
 					{title}
 				</Text>
-				<div className={clsx("flex", "gap-x-2")}>
+				<div className={clsx("flex", "gap-x-2", "max-md:text-sm")}>
 					<Text
 						className={clsx("text-gray-600", "dark:text-gray-300")}
 					>
@@ -69,7 +71,13 @@ export const TimelineItem = (props: TimelineItemProps) => {
 			</div>
 			{typeof description === "string" ? (
 				<Text
-					className={clsx("text-black", "dark:text-white")}
+					className={clsx(
+						"text-black",
+						"dark:text-white",
+						"max-md:max-h-[90%]",
+						"max-md:overflow-y-auto",
+						"max-md:text-sm"
+					)}
 					type="p"
 				>
 					{description}
@@ -81,12 +89,18 @@ export const TimelineItem = (props: TimelineItemProps) => {
 						"list-inside",
 						"flex",
 						"flex-col",
-						"gap-y-3"
+						"gap-y-3",
+						"max-md:max-h-[90%]",
+						"max-md:overflow-y-auto"
 					)}
 				>
 					{description.map(item => (
 						<li
-							className={clsx("text-black", "dark:text-white")}
+							className={clsx(
+								"text-black",
+								"dark:text-white",
+								"max-md:text-sm"
+							)}
 							key={item}
 						>
 							{item}
