@@ -12,6 +12,7 @@ export type Extensions =
 	| "txt"
 	| "md"
 	| "py"
+	| "rb"
 
 export interface RouteProps {
 	name: string

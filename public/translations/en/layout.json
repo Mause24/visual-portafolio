@@ -24,6 +24,11 @@
 					"ext": "css"
 				},
 				{
+					"name": "projects",
+					"route": "/projects",
+					"ext": "rb"
+				},
+				{
 					"name": "skills",
 					"route": "/skills",
 					"ext": "js"
@@ -37,7 +42,6 @@
 		},
 		{
 			"name": "Projects",
-			"route": "/projects",
 			"childrens": [
 				{
 					"name": "project1",

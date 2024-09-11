@@ -21,7 +21,15 @@ export const Layout = (props: LayoutProps): JSX.Element => {
 				)}
 			>
 				<AsideNavbar />
-				<main className={clsx("flex-1")}>{children}</main>
+				<main
+					className={clsx(
+						"flex-1",
+						"bg-light-background-normal",
+						"dark:bg-light-secondary-normal"
+					)}
+				>
+					{children}
+				</main>
 			</div>
 			<Footer />
 		</>

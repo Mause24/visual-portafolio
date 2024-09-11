@@ -6,6 +6,12 @@ export const useMobileScreen = ({ minSize = 768 }: useMobileScreenProps) => {
 	const [isMobileScreen, setIsMobileScreen] = useState(false)
 
 	useEffect(() => {
+		if (pageRef.current && pageRef.current.innerWidth < minSize) {
+			setIsMobileScreen(true)
+		} else {
+			setIsMobileScreen(false)
+		}
+
 		pageRef.current.addEventListener("resize", evt => {
 			const currentScreen = evt.target as Window
 
@@ -19,7 +25,7 @@ export const useMobileScreen = ({ minSize = 768 }: useMobileScreenProps) => {
 		return () => {
 			pageRef.current.removeEventListener("resize", () => {})
 		}
-	}, [pageRef.current])
+	}, [pageRef.current.innerWidth])
 
 	return {
 		isMobileScreen,
