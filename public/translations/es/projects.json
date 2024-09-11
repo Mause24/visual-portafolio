@@ -11,19 +11,19 @@
 			"id": 2,
 			"image": "/src/assets/images/projects/finalRound/finalRoundImage.jpeg",
 			"title": "Final Round",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iure reiciendis totam qui animi? Cum maiores quaerat earum consequuntur recusandae eaque dicta odit unde iste deleniti ipsum suscipit libero neque, eum ab ut magni, quos id doloremque quisquam totam? Eum quas quasi architecto neque ea quo, labore veritatis consequatur et?"
+			"description": "Es un proyecto de desarrollo de videojuegos, que busca mediante a formulas matematicas simular un motor grafico simple para replicar la dinamica de los juegos de pelea estilo arcade, ademas combinandolo con mecanicas modernas de desarrollo y optimizacion de procesos."
 		},
 		{
 			"id": 3,
 			"image": "/src/assets/images/projects/projectSakura/projectSakuraImage.jpeg",
 			"title": "Project Sakura",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iure reiciendis totam qui animi? Cum maiores quaerat earum consequuntur recusandae eaque dicta odit unde iste deleniti ipsum suscipit libero neque, eum ab ut magni, quos id doloremque quisquam totam? Eum quas quasi architecto neque ea quo, labore veritatis consequatur et?"
+			"description": "Es un proyecto en donde se busca hacer un programa de gestion de usuario con un inicio de sesion y registro, conectandolo con la API de Firebase y usando todo el tema de oAuth y 2Auth para el registro y autenticacion de usuarios."
 		},
 		{
 			"id": 4,
 			"image": "/src/assets/images/projects/googleClon/googleClonImage.jpeg",
 			"title": "Google Clone",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iure reiciendis totam qui animi? Cum maiores quaerat earum consequuntur recusandae eaque dicta odit unde iste deleniti ipsum suscipit libero neque, eum ab ut magni, quos id doloremque quisquam totam? Eum quas quasi architecto neque ea quo, labore veritatis consequatur et?"
+			"description": "Es un proyecto desarrollado en React, usando tenicas de estandarizacion de clases como BEM e implementando preprocesadores de estilos como SASS para replicar la estructura identica de una busqueda en Google"
 		}
 	],
 	"linkButton": "Ir"
