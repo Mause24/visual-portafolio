@@ -75,7 +75,7 @@
 	"settings": [
 		{
 			"label": "Idiomas",
-			"value": "lan",
+			"value": "lang",
 			"childs": [
 				{
 					"label": "Español",

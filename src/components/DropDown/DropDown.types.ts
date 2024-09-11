@@ -3,6 +3,7 @@ export interface ItemsDropDown {
 	value: string | number
 	onClick?: (val: string | number) => void
 	childs?: ItemsDropDown[]
+	isSelected?: boolean
 }
 
 export interface DropDownProps {

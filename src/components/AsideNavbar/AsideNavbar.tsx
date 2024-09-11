@@ -1,8 +1,5 @@
 import clsx from "clsx"
-import { FaLanguage, FaRegMoon } from "react-icons/fa"
-import { IoLanguage } from "react-icons/io5"
 import { LuFiles } from "react-icons/lu"
-import { MdOutlineWbSunny } from "react-icons/md"
 import { VscSettingsGear } from "react-icons/vsc"
 import { Button } from "../Button"
 import { Dropdown } from "../DropDown"
@@ -12,9 +9,6 @@ export const AsideNavbar = () => {
 	const {
 		hadleSideBar,
 		menuSideBar,
-		toggleTheme,
-		theme,
-		i18next,
 		routes,
 		isOpenSettings,
 		toggleSettingsDropdown,
@@ -22,7 +16,7 @@ export const AsideNavbar = () => {
 	} = useAsideNavbar()
 
 	return (
-		<aside className={clsx("flex")}>
+		<aside className={clsx("flex", "z-[1]")}>
 			<div
 				className={clsx(
 					"flex",
@@ -33,7 +27,8 @@ export const AsideNavbar = () => {
 					"dark:bg-light-secondary-aside",
 					"bg-gray-xlight",
 					"shadow",
-					"relative"
+					"relative",
+					"z-[1]"
 				)}
 			>
 				<Button
@@ -69,74 +64,27 @@ export const AsideNavbar = () => {
 					/>
 				</Button>
 				<div className={clsx("flex", "flex-col")}>
-					<Button
-						className={clsx("w-12", "h-12", "p-2")}
-						variant="transparent"
-						onClick={() => toggleTheme("dark", "light")}
+					<Dropdown
+						items={settings}
+						isOpen={isOpenSettings}
+						key={String(isOpenSettings)}
 					>
-						{theme === "light" ? (
-							<MdOutlineWbSunny
-								className={clsx(
-									"w-full",
-									"h-full",
-									"text-light-secondary-alternate"
-								)}
-							/>
-						) : (
-							<FaRegMoon
-								className={clsx(
-									"w-full",
-									"h-full",
-									"text-gray-heavy"
-								)}
-							/>
-						)}
-					</Button>
-					<Button
-						className={clsx("w-12", "h-12", "p-2")}
-						variant="transparent"
-						onClick={() =>
-							i18next.changeLanguage(
-								i18next.language === "es" ? "en" : "es"
-							)
-						}
-					>
-						{i18next.language === "es" ? (
-							<IoLanguage
-								className={clsx(
-									"w-full",
-									"h-full",
-									"text-light-secondary-alternate"
-								)}
-							/>
-						) : (
-							<FaLanguage
-								className={clsx(
-									"w-full",
-									"h-full",
-									"text-light-secondary-alternate"
-								)}
-							/>
-						)}
-					</Button>
-					<div className="flex justify-center items-center z-[10]">
-						<Dropdown
-							items={settings}
-							isOpen={isOpenSettings}
-							key={String(isOpenSettings)}
+						<Button
+							variant="transparent"
+							className={clsx("w-full", "p-2")}
+							onClick={toggleSettingsDropdown}
 						>
-							<Button onClick={toggleSettingsDropdown}>
-								<VscSettingsGear />
-							</Button>
-						</Dropdown>
-					</div>
+							<VscSettingsGear
+								className={clsx("h-full", "w-full")}
+							/>
+						</Button>
+					</Dropdown>
 				</div>
 			</div>
 			<nav
 				className={clsx(
 					"flex-col",
 					"flex-1",
-					"z-20",
 					"pl-2",
 					"w-[250px]",
 					"bg-gray-light",
