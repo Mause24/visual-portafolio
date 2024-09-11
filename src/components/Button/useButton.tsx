@@ -20,10 +20,10 @@ export const useButton = (props: ButtonProps) => {
 	} = {
 		primary: {
 			button: clsx(
-				"bg-primary-normal",
+				"bg-light-primary-normal",
 				"p-3",
 				"hover:bg-white",
-				"[&:hover>*]:text-primary-normal",
+				"[&:hover>*]:text-light-primary-normal",
 				"hover:shadow-md"
 			),
 			label: clsx("text-white"),
@@ -32,23 +32,23 @@ export const useButton = (props: ButtonProps) => {
 			button: clsx(
 				"bg-white",
 				"p-3",
-				"hover:bg-primary-normal",
+				"hover:bg-light-primary-normal",
 				"[&:hover>*]:text-white",
 				"shadow-md"
 			),
-			label: clsx("text-primary-normal"),
+			label: clsx("text-light-primary-normal"),
 		},
 		outline: {
 			button: clsx(
 				"bg-white",
 				"p-3",
 				"outline",
-				"outline-primary-normal",
+				"outline-light-primary-normal",
 				"[&:hover>*]:font-bold",
 				"duration-[100ms]",
 				"hover:outline-4"
 			),
-			label: clsx("text-primary-normal", "duration-[100ms]"),
+			label: clsx("text-light-primary-normal", "duration-[100ms]"),
 		},
 		disabled: {
 			button: clsx(

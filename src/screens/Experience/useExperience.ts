@@ -1,12 +1,12 @@
 import { TimelineItemProps } from "@/components"
-import { Experience } from "@/interfaces"
+import { ExperienceJSON } from "@/interfaces"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
 export const useExperience = () => {
 	const [t] = useTranslation("experience")
 	const experience: TimelineItemProps[] = useMemo(() => {
-		const currentObject: Experience[] = t("experience", {
+		const currentObject: ExperienceJSON[] = t("experience", {
 			returnObjects: true,
 		})
 		return currentObject.map(item => ({
