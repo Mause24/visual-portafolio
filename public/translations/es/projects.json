@@ -1,0 +1,30 @@
+{
+	"projectsPreview": [
+		{
+			"id": 1,
+			"image": "/src/assets/images/projects/dreamAgency/dreamAgency1.png",
+			"mobileImage": "/src/assets/images/projects/dreamAgency/dreamAgency1-mob.png",
+			"title": "Dream Agency",
+			"description": "Dream Agency es un proyecto desarrollado con Vanila (HTML, CSS, Javascript), que busca replicar la estructura base de las landing page de una forma elegante, funcional e innovadora, con su diseño sencillo y adapatable inclusive a dispositivos moviles."
+		},
+		{
+			"id": 2,
+			"image": "/src/assets/images/projects/finalRound/finalRoundImage.jpeg",
+			"title": "Final Round",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iure reiciendis totam qui animi? Cum maiores quaerat earum consequuntur recusandae eaque dicta odit unde iste deleniti ipsum suscipit libero neque, eum ab ut magni, quos id doloremque quisquam totam? Eum quas quasi architecto neque ea quo, labore veritatis consequatur et?"
+		},
+		{
+			"id": 3,
+			"image": "/src/assets/images/projects/projectSakura/projectSakuraImage.jpeg",
+			"title": "Project Sakura",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iure reiciendis totam qui animi? Cum maiores quaerat earum consequuntur recusandae eaque dicta odit unde iste deleniti ipsum suscipit libero neque, eum ab ut magni, quos id doloremque quisquam totam? Eum quas quasi architecto neque ea quo, labore veritatis consequatur et?"
+		},
+		{
+			"id": 4,
+			"image": "/src/assets/images/projects/googleClon/googleClonImage.jpeg",
+			"title": "Google Clone",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iure reiciendis totam qui animi? Cum maiores quaerat earum consequuntur recusandae eaque dicta odit unde iste deleniti ipsum suscipit libero neque, eum ab ut magni, quos id doloremque quisquam totam? Eum quas quasi architecto neque ea quo, labore veritatis consequatur et?"
+		}
+	],
+	"linkButton": "Ir"
+}

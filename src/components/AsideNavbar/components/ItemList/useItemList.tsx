@@ -76,12 +76,20 @@ export const useItemList = (props: ItemListProps) => {
 						)}
 					/>
 				)
+			case "rb":
+				return (
+					<img
+						src={IMAGES.rubyLogo}
+						className={clsx("w-4", "h-4", "bg-cover")}
+						alt="logoRuby"
+					/>
+				)
 			case "py":
 				return (
 					<img
 						src={IMAGES.python}
-						className={clsx("w-4", "h-4")}
-						alt="logo"
+						className={clsx("w-4", "h-4", "bg-cover")}
+						alt="logoPython"
 					/>
 				)
 

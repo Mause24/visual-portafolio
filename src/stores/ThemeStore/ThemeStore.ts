@@ -8,16 +8,12 @@ export const useThemeStore = create<ThemeStoreProps>((set, get) => {
 
 	const changeTheme = (newTheme: keyof typeof Themes) => {
 		const { theme } = get()
-		console.log("before")
-		console.log(theme)
 
 		document.documentElement.classList.remove(theme)
 		document.documentElement.classList.add(newTheme)
 		localStorage.setItem("theme", newTheme)
 
 		set({ theme: newTheme })
-		console.log("after")
-		console.log(theme)
 	}
 
 	const toggleTheme = (

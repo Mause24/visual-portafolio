@@ -12,7 +12,7 @@ export const AsideNavbar = () => {
 		useAsideNavbar()
 
 	return (
-		<aside className={clsx("flex")}>
+		<aside className={clsx("flex", "relative")}>
 			<div
 				className={clsx(
 					"flex",
@@ -119,6 +119,10 @@ export const AsideNavbar = () => {
 					"w-[250px]",
 					"bg-gray-light",
 					"dark:bg-light-secondary-navBar",
+					"max-md:absolute",
+					"max-md:top-0",
+					"max-md:left-full",
+					"max-md:h-full",
 					menuSideBar ? "flex" : "hidden"
 				)}
 			>
