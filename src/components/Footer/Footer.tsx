@@ -25,7 +25,7 @@ export const Footer = (): JSX.Element => {
 					<li>Tailwind</li>
 				</ul>
 			</div>
-			<div>
+			<div className="max-md:hidden">
 				<ul className="flex text-sm gap-3 list-none text-white">
 					<time dateTime="">{currentTime.toLocaleString()}</time>
 					<li>UTF-8</li>
