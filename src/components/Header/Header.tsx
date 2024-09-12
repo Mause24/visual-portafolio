@@ -41,11 +41,11 @@ export const Header = (props: HeaderProps): JSX.Element => {
 					))}
 				</ul>
 			</div>
-			<div className="flex items-center">
+			<div className="flex items-center max-md:hidden">
 				<Button variant="transparent" type="button">
 					<RiArrowLeftSLine className="w-6 h-6" />
 				</Button>
-				<div className="flex items-center gap-2">
+				<div className="flex items-center gap-2 ">
 					<Link to={"/"}>
 						<div className="rounded-full w-3 h-3 bg-red-800" />
 					</Link>
