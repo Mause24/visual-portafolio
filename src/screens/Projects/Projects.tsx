@@ -1,4 +1,4 @@
-import { Slider3D } from "@/components"
+import { Slider3D, Text } from "@/components"
 import { ProjectsJSON } from "@/interfaces"
 import clsx from "clsx"
 import { useMemo } from "react"
@@ -23,6 +23,21 @@ export const Projects = () => {
 				"bg-inherit"
 			)}
 		>
+			<Text
+				type="h2"
+				className={clsx(
+					"text-black",
+					"dark:text-white",
+					"text-center",
+					"mb-8",
+					"max-md:mb-2",
+					"uppercase",
+					"font-bold",
+					"tracking-[0.75rem]"
+				)}
+			>
+				{t("title")}
+			</Text>
 			<Slider3D items={projectsPreview} />
 		</div>
 	)

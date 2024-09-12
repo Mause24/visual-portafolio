@@ -9,6 +9,7 @@ export const GroupItem = (props: GroupItemProps) => {
 
 	return (
 		<Accordion
+			bodyClassName={clsx("no-scrollbar")}
 			header={renderHeader}
 			className={clsx("w-full", "no-scrollbar")}
 			handleOpen={handleOpenGroupItem}

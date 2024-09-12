@@ -7,19 +7,20 @@ import { useSlider3D } from "./useSlider3D"
 export const Slider3D = <T extends ItemSlider3DProps>(
 	props: Slider3DProps<T>
 ) => {
-	const {
-		keyExtractor,
-		renderItem,
-		translateZHeight,
-		items,
-		sliderRef,
-		sideLarge,
-	} = useSlider3D(props)
+	const { keyExtractor, renderItem, translateZHeight, items, sideLarge } =
+		useSlider3D(props)
 
 	return (
-		<div className={clsx("w-full", "flex", "justify-center")}>
+		<div
+			className={clsx(
+				"w-full",
+				"flex",
+				"justify-center",
+				"my-32",
+				"max-md:my-14"
+			)}
+		>
 			<div
-				ref={sliderRef}
 				className={clsx(
 					"relative",
 					"flex",
