@@ -7,14 +7,6 @@
 	transform-style: preserve-3d;
 }
 
-.frame {
-	transform-style: preserve-3d;
-}
-.side {
-	-webkit-backface-visibility: hidden;
-	-webkit-transform-style: preserve-3d;
-}
-
 @keyframes rotate {
 	from {
 		transform: perspective(1000px) rotateY(0deg);

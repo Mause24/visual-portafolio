@@ -1,16 +1,12 @@
-.rotation {
-	transform-style: preserve-3d;
-	animation: rotate 30s linear infinite;
-}
-.itemSlider {
-	transform-style: preserve-3d;
+.beating {
+	animation: beating 1s ease infinite both;
 }
 
-@keyframes rotate {
+@keyframes beating {
 	from {
-		transform: perspective(1000px) rotateY(0deg);
+		transform: scale(1);
 	}
 	to {
-		transform: perspective(1000px) rotateY(-360deg);
+		transform: scale(1.1);
 	}
 }

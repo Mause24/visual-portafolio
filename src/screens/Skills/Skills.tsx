@@ -24,7 +24,7 @@ export const Skills = () => {
 			</Text>
 			<div className="py-4">
 				<Text type="h3" className="font-sans dark:text-gray-500">
-					Lenguages
+					Languages
 				</Text>
 			</div>
 			<div className="lg:flex lg:flex-row lg:gap-x-10 flex flex-col gap-y-5 ">
