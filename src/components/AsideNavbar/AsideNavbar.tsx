@@ -16,7 +16,7 @@ export const AsideNavbar = () => {
 	} = useAsideNavbar()
 
 	return (
-		<aside className={clsx("flex", "z-[1]", '"relative"')}>
+		<aside className={clsx("flex", "z-[1]", "relative")}>
 			<div
 				className={clsx(
 					"flex",
