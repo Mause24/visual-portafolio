@@ -27,5 +27,22 @@
 			"description": "This is a React-based project that replicates the structure of a Google search page. It employs class standardization techniques like BEM and style preprocessors such as SASS to achieve an identical design."
 		}
 	],
-	"linkButton": "Go!"
+	"linkButton": "Go!",
+	"projectData": [{
+		"id":1,
+		"image": "https://images.wallpapersden.com/image/download/lionel-messi-footballer_am1taG6UmZqaraWkpJRmZWdprWpsaw.jpg",
+		"title":"Prueba de titulo del proyecto",
+		"description":"Es un proyecto desarrollado en React, usando tenicas de estandarizacion de clases como BEM e implementando preprocesadores de estilos como SASS para replicar la estructura identica de una busqueda en Google",
+		"icon":"ruta/icon",
+		"link":"link del proyecto",
+		"subtitle":"subtitulo segundo",
+		"items":[{
+			"item1":"prueba1",
+			"item2":"prueba2",
+			"item3":"prueba3"
+		}],
+		"subtitleTecnologies":"nombres de las tecnologias"
+		
+
+	}]
 }
