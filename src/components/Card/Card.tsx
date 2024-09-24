@@ -14,7 +14,17 @@ export const Card: React.FC<CardProps> = ({ title, src, path }) => {
 					"border-blue-500 "
 				)}
 			>
-				<div className="flex items-center px-2 py-1 w-[470px] gap-x-2">
+				<div
+					className={clsx(
+						"flex",
+						"items-center",
+						"px-2",
+						"py-1",
+						"lg:w-[470px]",
+						"w-full",
+						"gap-x-2"
+					)}
+				>
 					<img src={src} />
 					<Text
 						type="p"

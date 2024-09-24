@@ -39,7 +39,7 @@ export const useTimeline = <T extends TimelineItemProps>(
 					"relative",
 					"w-full",
 					"h-full",
-					"z-[1]",
+
 					horizontal
 						? clsx("max-w-screen", "overflow-x-auto")
 						: clsx("flex-col", "max-h-screen", "overflow-y-auto"),
