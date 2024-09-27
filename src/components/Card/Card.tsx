@@ -15,7 +15,7 @@ export const Card: React.FC<CardProps> = ({ title, src, path }) => {
 				)}
 			>
 				<div className="flex items-center px-2 py-1 w-[470px] gap-x-2">
-					<img src={src} />
+					<img src={src} alt="CardImage" />
 					<Text
 						type="p"
 						className={clsx(

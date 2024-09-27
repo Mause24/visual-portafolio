@@ -22,7 +22,8 @@ export const ItemSlider3D = ({
 				"transition-all",
 				"duration-500",
 				"cursor-pointer",
-				"bg-light-primary-normal",
+				"bg-gray-heavy",
+				"hover:bg-light-primary-normal",
 				"dark:bg-dark-secondary-alternate",
 				"group"
 			)}
@@ -70,7 +71,9 @@ export const ItemSlider3D = ({
 						"origin-bottom",
 						"group-hover:opacity-100",
 						"gap-y-3",
-						"p-2"
+						"px-4",
+						"pb-2",
+						"max-md:px-3"
 					)}
 				>
 					<Text
@@ -99,9 +102,9 @@ export const ItemSlider3D = ({
 						className={clsx(
 							"w-36",
 							"self-center",
+							"p-0",
 							"max-md:w-full",
-							"max-md:rounded-full",
-							"p-0"
+							"max-md:rounded-full"
 						)}
 						onClick={() => navigate(`/projects/${id}`)}
 						variant="primary"

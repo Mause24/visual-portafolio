@@ -13,6 +13,7 @@ export const AsideNavbar = () => {
 		isOpenSettings,
 		toggleSettingsDropdown,
 		settings,
+		setIsOpenSettings,
 	} = useAsideNavbar()
 
 	return (
@@ -65,6 +66,7 @@ export const AsideNavbar = () => {
 				</Button>
 				<div className={clsx("flex", "flex-col")}>
 					<Dropdown
+						closeBackdrop
 						items={settings}
 						isOpen={isOpenSettings}
 						key={String(isOpenSettings)}
@@ -75,7 +77,12 @@ export const AsideNavbar = () => {
 							onClick={toggleSettingsDropdown}
 						>
 							<VscSettingsGear
-								className={clsx("h-full", "w-full")}
+								className={clsx(
+									"h-full",
+									"w-full",
+									"text-light-secondary-alternate",
+									"dark:text-gray-xlight"
+								)}
 							/>
 						</Button>
 					</Dropdown>

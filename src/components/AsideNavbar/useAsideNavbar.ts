@@ -71,6 +71,7 @@ export const useAsideNavbar = () => {
 		routes,
 		i18next,
 		toggleSettingsDropdown,
+		setIsOpenSettings,
 		isOpenSettings,
 		settings,
 	}

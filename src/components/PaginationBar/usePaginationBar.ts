@@ -1,6 +1,5 @@
 import clsx from "clsx"
-import { times } from "lodash"
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useState } from "react"
 import {
 	PaginationBarsProps,
 	PaginationBarVariants,
@@ -83,49 +82,6 @@ export const usePaginationBar = (props: PaginationBarsProps) => {
 		},
 	}
 
-	const renderPages = useMemo(() => {
-		const parseArrayIndex = (
-			array: { key: string; value: number }[]
-		): { key: string; value: string | number }[] => {
-			switch (true) {
-				case array.length < 11:
-					return array
-				case currentIndex <= 5:
-					return [
-						...array.filter(item => item.value <= 7),
-						{ key: "idk-1", value: "..." },
-						...array.slice(array.length - 2),
-					]
-				case currentIndex > 5 && currentIndex < array.length - 4:
-					return [
-						...array.slice(0, 2),
-						{ key: "idk-1", value: "..." },
-						...array.slice(currentIndex - 3, currentIndex + 2),
-						{ key: "idk-2", value: "..." },
-						...array.slice(array.length - 2),
-					]
-				case currentIndex > array.length - 5:
-					return [
-						...array.slice(0, 2),
-						{ key: "idk-1", value: "..." },
-						...array.slice(array.length - 6),
-					]
-				default:
-					return array
-			}
-		}
-
-		const indexArr = times(currentSize, n => n + 1)
-		const pagesArray = parseArrayIndex(
-			indexArr.map(item => ({
-				key: item.toString(),
-				value: item,
-			}))
-		)
-
-		return pagesArray
-	}, [currentSize, currentIndex])
-
 	const onNext = (index: number) => () => {
 		const nextIndex = index + 1
 		if (nextIndex <= size) {
@@ -154,10 +110,10 @@ export const usePaginationBar = (props: PaginationBarsProps) => {
 
 	return {
 		currentIndex,
+		currentSize,
 		onNext,
 		onPagination,
 		onPrevious,
-		renderPages,
 		paginationBarVariantsStyles,
 		variants,
 	}

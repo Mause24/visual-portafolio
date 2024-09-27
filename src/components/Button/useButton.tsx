@@ -21,9 +21,11 @@ export const useButton = (props: ButtonProps) => {
 		primary: {
 			button: clsx(
 				"bg-light-primary-normal",
+				"dark:bg-light-secondary-navBar",
 				"p-3",
 				"hover:bg-white",
 				"[&:hover>*]:text-light-primary-normal",
+				"[&:hover>*]:dark:text-black",
 				"hover:shadow-md"
 			),
 			label: clsx("text-white"),

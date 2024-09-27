@@ -16,8 +16,7 @@ export const Header = (props: HeaderProps): JSX.Element => {
 				"px-3",
 				"bg-gray-heavy",
 				"dark:bg-light-secondary-header",
-				"dark:text-white",
-				"text-black",
+
 				"flex",
 				"justify-between",
 				"items-center",
@@ -36,14 +35,29 @@ export const Header = (props: HeaderProps): JSX.Element => {
 				<ul className="flex gap-3 list-none text-text-10 text-sm font-light ml-2 font-sans">
 					{links.map(item => (
 						<li key={item.id}>
-							<Text size="sm">{item.name}</Text>
+							<Text
+								className={clsx(
+									"text-black",
+									"dark:text-white"
+								)}
+								size="sm"
+							>
+								{item.name}
+							</Text>
 						</li>
 					))}
 				</ul>
 			</div>
 			<div className="flex items-center max-md:hidden">
 				<Button variant="transparent" type="button">
-					<RiArrowLeftSLine className="w-6 h-6" />
+					<RiArrowLeftSLine
+						className={clsx(
+							"w-6",
+							"h-6",
+							"text-black",
+							"dark:text-white"
+						)}
+					/>
 				</Button>
 				<div className="flex items-center gap-2 ">
 					<Link to={"/"}>

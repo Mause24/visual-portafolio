@@ -1,4 +1,11 @@
-import { Experience, Home, ProjectDetail, Projects, Skills } from "@/screens"
+import {
+	Contact,
+	Experience,
+	Home,
+	ProjectDetail,
+	Projects,
+	Skills,
+} from "@/screens"
 import { Route, Routes } from "react-router-dom"
 
 export const GeneralRouter = (): JSX.Element => {
@@ -9,6 +16,7 @@ export const GeneralRouter = (): JSX.Element => {
 			<Route path="/experience" element={<Experience />} />
 			<Route path="/projects" element={<Projects />} />
 			<Route path="/projects/:id" element={<ProjectDetail />} />
+			<Route path="/contact" element={<Contact />} />
 		</Routes>
 	)
 }

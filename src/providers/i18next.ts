@@ -1,14 +1,18 @@
 import translater from "i18next"
 import LanguageDetector from "i18next-browser-languagedetector"
 import { initReactI18next } from "react-i18next"
-// LANGUAGE EN
-import experienceEN from "@/translations/en/experience.json"
-import layoutEN from "@/translations/en/layout.json"
-import projectsEN from "@/translations/en/projects.json"
 // LANGUAGE ES
+import contactES from "@/translations/es/contact.json"
 import experienceES from "@/translations/es/experience.json"
+import generalES from "@/translations/es/general.json"
 import layoutES from "@/translations/es/layout.json"
 import projectsES from "@/translations/es/projects.json"
+// LANGUAGE EN
+import contactEN from "@/translations/en/contact.json"
+import experienceEN from "@/translations/en/experience.json"
+import generalEN from "@/translations/en/general.json"
+import layoutEN from "@/translations/en/layout.json"
+import projectsEN from "@/translations/en/projects.json"
 
 translater
 	.use(LanguageDetector)
@@ -16,13 +20,17 @@ translater
 	.init({
 		resources: {
 			es: {
-				layout: layoutES,
+				contact: contactES,
 				experience: experienceES,
+				general: generalES,
+				layout: layoutES,
 				projects: projectsES,
 			},
 			en: {
-				layout: layoutEN,
+				contact: contactEN,
 				experience: experienceEN,
+				general: generalEN,
+				layout: layoutEN,
 				projects: projectsEN,
 			},
 		},

@@ -1,28 +1,26 @@
+import { Text } from "@/components"
 import clsx from "clsx"
-import { Text } from "../Text"
-import { InputProps } from "./Input.types"
-import { useInput } from "./useInput"
+import { TextAreaInputProps } from "./TextAreaInput.types"
+import { useTextAreaInput } from "./useTextAreaInput"
 
-export const Input = (props: InputProps) => {
+export const TextAreaInput = (props: TextAreaInputProps) => {
 	const {
 		className,
 		containerClassname,
-		labelClassname,
-		label,
-		styleType,
-		styleVariant,
-		refInput,
-		id,
 		currentPlaceholder,
 		error,
+		id,
+		label,
+		labelClassname,
+		refInput,
+		rest,
+		styleType,
+		styleVariant,
 		value,
-		type,
 		leftIcon,
 		rightIcon,
 		inputClassname,
-		rest,
-	} = useInput<HTMLInputElement>(props)
-
+	} = useTextAreaInput(props)
 	return (
 		<div
 			className={clsx(
@@ -38,6 +36,7 @@ export const Input = (props: InputProps) => {
 					size="lg"
 					className={clsx(
 						"font-bold",
+						"dark:text-white",
 						error
 							? clsx("text-red-400", "dark:text-red-400")
 							: clsx(
@@ -57,7 +56,6 @@ export const Input = (props: InputProps) => {
 			<div
 				className={clsx(
 					"flex",
-					"w-full",
 					"border-2",
 					"rounded-md",
 					"overflow-hidden",
@@ -75,13 +73,12 @@ export const Input = (props: InputProps) => {
 				)}
 			>
 				{leftIcon}
-				<input
+				<textarea
 					ref={refInput}
 					id={id ?? label}
 					value={value}
-					type={type}
 					className={clsx(
-						"flex-1",
+						"w-full",
 						"pl-3",
 						"py-3",
 						"outline-none",
@@ -96,6 +93,7 @@ export const Input = (props: InputProps) => {
 				/>
 				{rightIcon}
 			</div>
+
 			{error &&
 				(typeof error === "string" ? (
 					<Text
