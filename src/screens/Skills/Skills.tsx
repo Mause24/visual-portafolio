@@ -16,7 +16,7 @@ import {
 	SiTypescript,
 } from "react-icons/si"
 import { TbBrandReactNative } from "react-icons/tb"
-export const Skills = () => {
+export const Skills = (): JSX.Element => {
 	return (
 		<div className="flex flex-col gap-y-5 px-5 py-4 max-h-screen overflow-y-auto">
 			<Text type="h2" className="font-sans dark:text-gray-500 text-black">
@@ -89,17 +89,26 @@ export const Skills = () => {
 			</div>
 			<div className="lg:flex lg:flex-row lg:gap-x-10 flex flex-col gap-y-5">
 				<div className="flex  items-center gap-6">
-					<img src={IMAGES.visual} className="h-12 w-12" />
+					<img
+						alt="visual"
+						src={IMAGES.visual}
+						className="h-12 w-12"
+					/>
 					<Text className="font-sans dark:text-white">
 						Visual studio
 					</Text>
 				</div>
 				<div className="flex  items-center gap-6">
-					<img src={IMAGES.slack} />
+					<img alt="slack" src={IMAGES.slack} />
 					<Text className="font-sans dark:text-white">Slack</Text>
 				</div>
 				<div className="flex  items-center gap-6">
-					<img src={IMAGES.clickUp} width={48} height={48} />
+					<img
+						alt="clickUp"
+						src={IMAGES.clickUp}
+						width={48}
+						height={48}
+					/>
 					<Text className="font-sans dark:text-white">Click up</Text>
 				</div>
 				<div className="flex  items-center gap-6">
@@ -107,7 +116,7 @@ export const Skills = () => {
 					<Text className="font-sans dark:text-white">Jira</Text>
 				</div>
 				<div className="flex  items-center gap-6">
-					<img src={IMAGES.figma} />
+					<img alt="figma" src={IMAGES.figma} />
 					<Text className="font-sans dark:text-white">Figma</Text>
 				</div>
 				<div className="flex  items-center gap-6">
@@ -127,6 +136,7 @@ export const Skills = () => {
 			<div className="lg:flex lg:flex-row lg:gap-x-10 flex flex-col gap-y-5 ">
 				<div className="flex  items-center gap-6">
 					<img
+						alt="axios"
 						src={IMAGES.axios}
 						width={70}
 						height={70}
@@ -135,21 +145,36 @@ export const Skills = () => {
 					<Text className="font-sans dark:text-white">Axios</Text>
 				</div>
 				<div className="flex  items-center gap-6">
-					<img src={IMAGES.reactDom} width={48} height={48} />
+					<img
+						alt="reactDom"
+						src={IMAGES.reactDom}
+						width={48}
+						height={48}
+					/>
 					<Text className="font-sans dark:text-white">
 						React Router Dom
 					</Text>
 				</div>
 				<div className="flex  items-center gap-6">
-					<img src={IMAGES.zustands} width={70} height={70} />
+					<img
+						alt="zustands"
+						src={IMAGES.zustands}
+						width={70}
+						height={70}
+					/>
 					<Text className="font-sans dark:text-white">Zustand</Text>
 				</div>
 				<div className="flex  items-center gap-6">
-					<img src={IMAGES.Redux} width={50} height={50} />
+					<img
+						alt="Redux"
+						src={IMAGES.Redux}
+						width={50}
+						height={50}
+					/>
 					<Text className="font-sans dark:text-white">Redux</Text>
 				</div>
 				<div className="flex  items-center gap-6">
-					<img src={IMAGES.mui} width={50} height={50} />
+					<img alt="mui" src={IMAGES.mui} width={50} height={50} />
 					<Text className="font-sans dark:text-white">
 						Material Ui
 					</Text>
@@ -171,7 +196,12 @@ export const Skills = () => {
 					</Text>
 				</div>
 				<div className="flex  items-center gap-6">
-					<img src={IMAGES.flutter} width={50} height={50} />
+					<img
+						alt="flutter"
+						src={IMAGES.flutter}
+						width={50}
+						height={50}
+					/>
 					<Text className="font-sans dark:text-white">Flutter</Text>
 				</div>
 			</div>

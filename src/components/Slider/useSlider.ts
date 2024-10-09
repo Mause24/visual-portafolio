@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react"
 import { SliderItemProps, SliderProps } from "./Slider.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useSlider = <T extends SliderItemProps>(props: SliderProps<T>) => {
 	const { items, index, onChangeIndex, onPressNext, onPressPrevious } = props
 	const [currentIndex, setCurrentIndex] = useState(index ?? 0)

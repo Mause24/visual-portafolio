@@ -3,7 +3,7 @@ import clsx from "clsx"
 import { TextAreaInputProps } from "./TextAreaInput.types"
 import { useTextAreaInput } from "./useTextAreaInput"
 
-export const TextAreaInput = (props: TextAreaInputProps) => {
+export const TextAreaInput = (props: TextAreaInputProps): JSX.Element => {
 	const {
 		className,
 		containerClassname,

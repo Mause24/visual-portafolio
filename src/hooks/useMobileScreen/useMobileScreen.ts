@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { useMobileScreenProps } from "./useMobileScreen.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useMobileScreen = ({ minSize = 768 }: useMobileScreenProps) => {
 	const pageRef = useRef(window)
 	const [isMobileScreen, setIsMobileScreen] = useState(false)
@@ -22,7 +23,7 @@ export const useMobileScreen = ({ minSize = 768 }: useMobileScreenProps) => {
 			}
 		})
 
-		return () => {
+		return (): void => {
 			pageRef.current.removeEventListener("resize", () => {})
 		}
 	}, [pageRef.current.innerWidth])

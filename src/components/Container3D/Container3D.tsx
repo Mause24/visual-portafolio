@@ -6,7 +6,7 @@ export const Container3D = ({
 	children,
 	distance = 20,
 	className,
-}: Container3DProps) => {
+}: Container3DProps): JSX.Element => {
 	return (
 		<div
 			className={clsx(

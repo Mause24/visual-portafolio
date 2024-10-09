@@ -5,7 +5,7 @@ import { Button } from "../Button"
 import { Dropdown } from "../DropDown"
 import { GroupItem, ItemList } from "./components"
 import { useAsideNavbar } from "./useAsideNavbar"
-export const AsideNavbar = () => {
+export const AsideNavbar = (): JSX.Element => {
 	const {
 		hadleSideBar,
 		menuSideBar,
@@ -13,7 +13,6 @@ export const AsideNavbar = () => {
 		isOpenSettings,
 		toggleSettingsDropdown,
 		settings,
-		setIsOpenSettings,
 	} = useAsideNavbar()
 
 	return (

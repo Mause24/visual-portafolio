@@ -3,7 +3,7 @@ import clsx from "clsx"
 import { GroupItemProps } from "./GroupItem.types"
 import { useGroupItem } from "./useGroupItem"
 
-export const GroupItem = (props: GroupItemProps) => {
+export const GroupItem = (props: GroupItemProps): JSX.Element => {
 	const { renderHeader, childrens, name, handleOpenGroupItem, isOpenGroup } =
 		useGroupItem(props)
 

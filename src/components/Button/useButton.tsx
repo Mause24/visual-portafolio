@@ -3,6 +3,7 @@ import { useMemo } from "react"
 import { Text } from "../Text"
 import { ButtonProps, ButtonVariants } from "./Button.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useButton = (props: ButtonProps) => {
 	const {
 		className,

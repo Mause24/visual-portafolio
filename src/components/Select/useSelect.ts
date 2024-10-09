@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react"
 import { SelectItem, SelectProps } from "./Select.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useSelect = <T extends SelectItem>(props: SelectProps<T>) => {
 	const {
 		data,
@@ -33,7 +34,7 @@ export const useSelect = <T extends SelectItem>(props: SelectProps<T>) => {
 	)
 
 	const handleSelectItem = useCallback(
-		(newItem: T) => () => {
+		(newItem: T) => (): void => {
 			setSelectedItem(newItem)
 			setIsOpen(false)
 			hanldeSelectOption?.(newItem)

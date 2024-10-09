@@ -4,6 +4,7 @@ import { Themes, useThemeStore } from "@/stores"
 import { useEffect, useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useAsideNavbar = () => {
 	const [isOpenSettings, setIsOpenSettings] = useState(false)
 	const [menuSideBar, setMenuSideBar] = useState(true)
@@ -18,11 +19,11 @@ export const useAsideNavbar = () => {
 		[t("aside")]
 	)
 
-	const changeLanguages = (type: string) => {
+	const changeLanguages = (type: string): void => {
 		setIsSelectd({ ...isSelectd, lang: type })
 		i18next.changeLanguage(type)
 	}
-	const changeThemeView = (theme: Themes) => {
+	const changeThemeView = (theme: Themes): void => {
 		setIsSelectd({ ...isSelectd, theme: theme })
 		changeTheme(theme)
 	}
@@ -35,11 +36,10 @@ export const useAsideNavbar = () => {
 			label: item.label,
 			childs: item.childs?.map(i => ({
 				...i,
-				onClick: val => {
+				onClick: (val): void =>
 					item.value === "lang"
 						? changeLanguages(String(val))
-						: changeThemeView(val as Themes)
-				},
+						: changeThemeView(val as Themes),
 				isSelected:
 					item.value === "lang"
 						? isSelectd.lang === i.value
@@ -49,7 +49,7 @@ export const useAsideNavbar = () => {
 		}))
 	}, [t("settings"), changeLanguages, changeThemeView])
 
-	const toggleSettingsDropdown = () => {
+	const toggleSettingsDropdown = (): void => {
 		setIsOpenSettings(!isOpenSettings)
 	}
 
@@ -59,7 +59,7 @@ export const useAsideNavbar = () => {
 
 	useEffect(() => {}, [isSelectd])
 
-	const hadleSideBar = () => {
+	const hadleSideBar = (): void => {
 		setMenuSideBar(state => !state)
 	}
 

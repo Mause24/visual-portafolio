@@ -1,6 +1,7 @@
 import clsx from "clsx"
 import { TextProps, TextSizes, TextTypes, TextWeights } from "./Text.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useText = <T extends keyof TextTypes>(props: TextProps<T>) => {
 	const {
 		type = "span",

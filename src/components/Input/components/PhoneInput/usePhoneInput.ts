@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 import { useInput } from "../../useInput"
 import { PhoneInputProps } from "./PhoneInput.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const usePhoneInput = (props: PhoneInputProps) => {
 	const {
 		containerClassname,
@@ -35,7 +36,7 @@ export const usePhoneInput = (props: PhoneInputProps) => {
 		[t("countryExtensions")]
 	)
 
-	const handleCountryChange = (newCountry: SelectItem) => {
+	const handleCountryChange = (newCountry: SelectItem): void => {
 		setSelectedCountry(newCountry)
 	}
 

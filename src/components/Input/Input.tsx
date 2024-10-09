@@ -3,7 +3,7 @@ import { Text } from "../Text"
 import { InputProps } from "./Input.types"
 import { useInput } from "./useInput"
 
-export const Input = (props: InputProps) => {
+export const Input = (props: InputProps): JSX.Element => {
 	const {
 		className,
 		containerClassname,

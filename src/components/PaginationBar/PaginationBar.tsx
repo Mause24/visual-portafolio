@@ -5,7 +5,7 @@ import { PaginationBarItems } from "../PaginationBarItems"
 import { PaginationBarsProps } from "./PaginationBar.type"
 import { usePaginationBar } from "./usePaginationBar"
 
-export const PaginationBar = (props: PaginationBarsProps) => {
+export const PaginationBar = (props: PaginationBarsProps): JSX.Element => {
 	const {
 		onNext,
 		onPrevious,

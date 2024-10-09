@@ -4,6 +4,7 @@ import { isEmpty } from "lodash"
 import { useMemo } from "react"
 import { InputNativeTypes, InputProps } from "./Input.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useInput = <T extends HTMLElement>(props: InputProps) => {
 	const {
 		containerClassname,
@@ -28,7 +29,7 @@ export const useInput = <T extends HTMLElement>(props: InputProps) => {
 	const isNotEmptyInput = (
 		_: string | number | readonly string[] | undefined,
 		type?: InputNativeTypes
-	) => {
+	): boolean => {
 		switch (true) {
 			case type === "number":
 				return typeof value === "number" || !isEmpty(value)

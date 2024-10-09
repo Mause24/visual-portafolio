@@ -3,6 +3,8 @@ import { times } from "lodash"
 import { useMemo, useState } from "react"
 import { PaginationBarVariants } from "../PaginationBar/PaginationBar.type"
 import { PaginationBarItemsProps } from "./PaginationBarItems.types"
+
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const usePaginationBarItems = (props: PaginationBarItemsProps) => {
 	const {
 		index,
@@ -99,7 +101,7 @@ export const usePaginationBarItems = (props: PaginationBarItemsProps) => {
 		return pagesArray
 	}, [currentSize, currentIndex])
 
-	const onPagination = (index: number) => () => {
+	const onPagination = (index: number) => (): void => {
 		onChangeIndex?.(index)
 		setCurrentIndex(index)
 	}

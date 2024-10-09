@@ -5,7 +5,9 @@ import { PaginationBarItems } from "../PaginationBarItems"
 import { SliderItemProps, SliderProps } from "./Slider.types"
 import { useSlider } from "./useSlider"
 
-export const Slider = <T extends SliderItemProps>(props: SliderProps<T>) => {
+export const Slider = <T extends SliderItemProps>(
+	props: SliderProps<T>
+): JSX.Element => {
 	const {
 		items,
 		currentIndex,

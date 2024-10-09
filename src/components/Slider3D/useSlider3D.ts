@@ -5,6 +5,7 @@ import { ItemSlider3DProps } from "./components"
 
 export const useSlider3D = <T extends ItemSlider3DProps>(
 	props: Slider3DProps<T>
+	// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 ) => {
 	const {
 		items,

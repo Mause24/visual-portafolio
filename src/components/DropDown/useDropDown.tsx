@@ -5,6 +5,7 @@ import { Button } from "../Button"
 import { Dropdown } from "./DropDown"
 import { DropDownProps, ItemsDropDown } from "./DropDown.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useDropDown = (props: DropDownProps) => {
 	const {
 		isOpen = false,
@@ -17,16 +18,16 @@ export const useDropDown = (props: DropDownProps) => {
 	const [isOpenDropDown, setIsOpenDropDown] = useState(isOpen)
 	const [hovering, setHovering] = useState<number | null>(null)
 
-	const handleHovering = (index: number | null) => () => {
+	const handleHovering = (index: number | null) => (): void => {
 		setHovering(index)
 	}
 
-	const toggleDropDown = () => {
+	const toggleDropDown = (): void => {
 		setIsOpenDropDown(!isOpenDropDown)
 		onChangeDropDown?.(isOpenDropDown)
 	}
 
-	const renderItems = (items: ItemsDropDown[]) => {
+	const renderItems = (items: ItemsDropDown[]): JSX.Element[] => {
 		return items.map((item, index) =>
 			item.childs && item.childs?.length > 0 ? (
 				<Button

@@ -4,7 +4,9 @@ import { IoIosSearch } from "react-icons/io"
 import { SelectItem, SelectProps } from "./Select.types"
 import { useSelect } from "./useSelect"
 
-export const Select = <T extends SelectItem>(props: SelectProps<T>) => {
+export const Select = <T extends SelectItem>(
+	props: SelectProps<T>
+): JSX.Element => {
 	const {
 		data,
 		handleFilter,

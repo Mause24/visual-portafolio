@@ -3,7 +3,9 @@ import { Button } from "../Button"
 import { PaginationBarItemsProps } from "./PaginationBarItems.types"
 import { usePaginationBarItems } from "./usePaginationBarItems"
 
-export const PaginationBarItems = (props: PaginationBarItemsProps) => {
+export const PaginationBarItems = (
+	props: PaginationBarItemsProps
+): JSX.Element => {
 	const {
 		currentIndex,
 		onPagination,

@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 import * as Yup from "yup"
 import { ContactForm } from "./Contact.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useContact = () => {
 	const [imageSliderIndex, setImageSliderIndex] = useState(0)
 	const [t] = useTranslation("contact")
@@ -18,7 +19,7 @@ export const useContact = () => {
 		[t("opinionsSlider")]
 	)
 
-	const onChangeIndex = (newIndex: number) => {
+	const onChangeIndex = (newIndex: number): void => {
 		setImageSliderIndex(newIndex)
 	}
 

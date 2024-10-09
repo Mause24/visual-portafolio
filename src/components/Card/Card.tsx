@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { Text } from "../Text"
 import { CardProps } from "./Card.types"
 
-export const Card: React.FC<CardProps> = ({ title, src, path }) => {
+export const Card = ({ title, src, path }: CardProps): JSX.Element => {
 	return (
 		<Link to={path}>
 			<div

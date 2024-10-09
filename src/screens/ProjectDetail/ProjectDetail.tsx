@@ -2,7 +2,7 @@ import { Text } from "@/components"
 import clsx from "clsx"
 import { useProjectDetail } from "./useProjectDetail"
 
-export const ProjectDetail = () => {
+export const ProjectDetail = (): JSX.Element => {
 	const { projectId } = useProjectDetail()
 	return (
 		<div

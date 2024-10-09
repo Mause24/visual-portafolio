@@ -11,12 +11,12 @@ import { Formik } from "formik"
 import { ContactForm } from "./Contact.types"
 import { useContact } from "./useContact"
 
-export const Contact = () => {
+export const Contact = (): JSX.Element => {
 	const {
 		onSubmit,
 		validationSchema,
-		imageSliderIndex,
-		onChangeIndex,
+		/* imageSliderIndex,
+		onChangeIndex, */
 		formContainer,
 		opinions,
 	} = useContact()

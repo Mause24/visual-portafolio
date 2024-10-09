@@ -11,7 +11,7 @@ export const ItemSlider3D = ({
 	image,
 	mobileImage,
 	title,
-}: ItemSlider3DProps) => {
+}: ItemSlider3DProps): JSX.Element => {
 	const [t] = useTranslation("projects")
 	const navigate = useNavigate()
 	return (

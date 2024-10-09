@@ -4,16 +4,17 @@ import { useState } from "react"
 import { FaChevronDown, FaFolder, FaFolderOpen } from "react-icons/fa"
 import { GroupItemProps } from "./GroupItem.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useGroupItem = (props: GroupItemProps) => {
 	const { childrens, isOpen, name, handleOpen } = props
 	const [isOpenGroup, setIsOpenGroup] = useState<boolean>(isOpen ?? false)
 
-	const handleOpenGroupItem = () => {
+	const handleOpenGroupItem = (): void => {
 		setIsOpenGroup(state => !state)
 		handleOpen?.()
 	}
 
-	const renderHeader = ({ isOpen, title }: HeaderOptions) => (
+	const renderHeader = ({ isOpen, title }: HeaderOptions): JSX.Element => (
 		<div
 			className={clsx("flex", "justify-start", "items-center", "gap-x-1")}
 		>
@@ -62,10 +63,10 @@ export const useGroupItem = (props: GroupItemProps) => {
 	)
 
 	return {
-		renderHeader,
-		childrens,
 		isOpenGroup,
+		childrens,
 		handleOpenGroupItem,
 		name,
+		renderHeader,
 	}
 }

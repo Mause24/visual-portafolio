@@ -5,6 +5,7 @@ import {
 	PaginationBarVariants,
 } from "./PaginationBar.type"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const usePaginationBar = (props: PaginationBarsProps) => {
 	const {
 		size = 1,
@@ -82,7 +83,7 @@ export const usePaginationBar = (props: PaginationBarsProps) => {
 		},
 	}
 
-	const onNext = (index: number) => () => {
+	const onNext = (index: number) => (): void => {
 		const nextIndex = index + 1
 		if (nextIndex <= size) {
 			setCurrentIndex(nextIndex)
@@ -90,7 +91,7 @@ export const usePaginationBar = (props: PaginationBarsProps) => {
 		}
 	}
 
-	const onPrevious = (index: number) => () => {
+	const onPrevious = (index: number) => (): void => {
 		const previousIndex = index - 1
 		if (previousIndex >= 1) {
 			setCurrentIndex(previousIndex)
@@ -98,7 +99,7 @@ export const usePaginationBar = (props: PaginationBarsProps) => {
 		}
 	}
 
-	const onPagination = (index: number) => () => {
+	const onPagination = (index: number) => (): void => {
 		onPressPage?.(index)
 		setCurrentIndex(index)
 	}

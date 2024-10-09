@@ -3,7 +3,7 @@ import clsx from "clsx"
 import { PhoneInputProps } from "./PhoneInput.types"
 import { usePhoneInput } from "./usePhoneInput"
 
-export const PhoneInput = (props: PhoneInputProps) => {
+export const PhoneInput = (props: PhoneInputProps): JSX.Element => {
 	const {
 		className,
 		containerClassname,
