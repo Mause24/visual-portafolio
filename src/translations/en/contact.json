@@ -30,23 +30,23 @@
 	"opinionsSlider": [
 		{
 			"id": 1,
-			"image": "/src/assets/images/projects/googleClon/googleClonImage.jpeg"
+			"image": "/src/assets/images/projects/dreamAgency/dreamAgency1-mob.png"
 		},
 		{
 			"id": 2,
-			"image": "/src/assets/images/projects/googleClon/googleClonImage.jpeg"
+			"image": "/src/assets/images/projects/dreamAgency/dreamAgency1-mob.png"
 		},
 		{
 			"id": 3,
-			"image": "/src/assets/images/projects/googleClon/googleClonImage.jpeg"
+			"image": "/src/assets/images/projects/dreamAgency/dreamAgency1-mob.png"
 		},
 		{
 			"id": 4,
-			"image": "/src/assets/images/projects/googleClon/googleClonImage.jpeg"
+			"image": "/src/assets/images/projects/dreamAgency/dreamAgency1-mob.png"
 		},
 		{
 			"id": 5,
-			"image": "/src/assets/images/projects/googleClon/googleClonImage.jpeg"
+			"image": "/src/assets/images/projects/dreamAgency/dreamAgency1-mob.png"
 		}
 	]
 }

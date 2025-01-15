@@ -68,8 +68,10 @@ export const ItemSlider3D = ({
 						"from-transparent",
 						"to-black",
 						"opacity-0",
+						"pointer-events-none",
 						"origin-bottom",
 						"group-hover:opacity-100",
+						"group-hover:pointer-events-auto",
 						"gap-y-3",
 						"px-4",
 						"pb-2",
@@ -78,9 +80,10 @@ export const ItemSlider3D = ({
 				>
 					<Text
 						className={clsx(
-							"text-white",
+							"text-dark-primary-normal",
 							"text-base",
-							"text-center"
+							"text-center",
+							"max-md:select-none"
 						)}
 						type="h3"
 					>
@@ -92,7 +95,8 @@ export const ItemSlider3D = ({
 							"text-xs",
 							"max-h-[150px]",
 							"overflow-y-auto",
-							"no-scrollbar"
+							"no-scrollbar",
+							"max-md:select-none"
 						)}
 						type="p"
 					>
@@ -104,7 +108,8 @@ export const ItemSlider3D = ({
 							"self-center",
 							"p-0",
 							"max-md:w-full",
-							"max-md:rounded-full"
+							"max-md:rounded-full",
+							"max-md:select-none"
 						)}
 						onClick={() => navigate(`/projects/${id}`)}
 						variant="primary"

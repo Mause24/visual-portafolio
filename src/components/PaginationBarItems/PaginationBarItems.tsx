@@ -47,7 +47,7 @@ export const PaginationBarItems = (
 								"justify-center"
 							)}
 						>
-							{item.value}
+							{item.label}
 						</span>
 					) : (
 						<Button
@@ -61,7 +61,7 @@ export const PaginationBarItems = (
 							onClick={onPagination(Number(item.value))}
 							variant="transparent"
 						>
-							{item.value}
+							{item.label}
 						</Button>
 					)}
 				</li>

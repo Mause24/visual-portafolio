@@ -11,7 +11,7 @@ export const Card = ({ title, src, path }: CardProps): JSX.Element => {
 					"bg-neutral-200",
 					"dark:bg-dark-backgroundHeader-normal",
 					"border-b-4",
-					"border-blue-500 "
+					"border-blue-500"
 				)}
 			>
 				<div className="flex items-center px-2 py-1 w-[470px] gap-x-2">

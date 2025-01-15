@@ -30,7 +30,7 @@ export const Contact = (): JSX.Element => {
 				"justify-center",
 				"items-center",
 				"overflow-y-auto",
-				"gap-x-3",
+				"gap-3",
 				"p-3",
 				"flex-wrap"
 			)}
@@ -42,7 +42,6 @@ export const Contact = (): JSX.Element => {
 					"flex",
 					"flex-[0.4]",
 					"flex-col",
-					"max-md:flex-1",
 					"flex-shrink-0",
 					"justify-evenly",
 					"gap-y-4",
@@ -50,7 +49,10 @@ export const Contact = (): JSX.Element => {
 					"px-10",
 					"bg-gray-light",
 					"dark:bg-dark-secondary-alternate",
-					"rounded-xl"
+					"rounded-xl",
+					"max-md:flex-1",
+					"max-md:h-auto",
+					"max-md:px-4"
 				)}
 			>
 				<div className={clsx("flex", "flex-col", "gap-y-3")}>
@@ -60,7 +62,8 @@ export const Contact = (): JSX.Element => {
 						weight="bold"
 						className={clsx(
 							"text-dark-primary-normal",
-							"dark:text-white"
+							"dark:text-white",
+							"max-md:text-center"
 						)}
 					>
 						{formContainer.title}
@@ -70,7 +73,8 @@ export const Contact = (): JSX.Element => {
 						size="2xl"
 						className={clsx(
 							"text-gray-800",
-							"dark:text-gray-heavy"
+							"dark:text-gray-heavy",
+							"max-md:text-center"
 						)}
 					>
 						{formContainer.subtitle}
@@ -79,7 +83,8 @@ export const Contact = (): JSX.Element => {
 						type="p"
 						className={clsx(
 							"text-gray-800",
-							"dark:text-gray-heavy"
+							"dark:text-gray-heavy",
+							"max-md:text-center"
 						)}
 					>
 						{formContainer.description}
@@ -122,9 +127,21 @@ export const Contact = (): JSX.Element => {
 								"rounded-md"
 							)}
 						>
-							<div className={clsx("flex", "w-full", "gap-x-3")}>
+							<div
+								className={clsx(
+									"flex",
+									"w-full",
+									"gap-x-3",
+									"max-md:flex-wrap",
+									"max-md:gap-y-4"
+								)}
+							>
 								<Input
-									containerClassname={clsx("flex-1")}
+									containerClassname={clsx(
+										"flex-1",
+										"max-md:flex-shrink-0",
+										"max-md:w-full"
+									)}
 									type="name"
 									label={formContainer.form.firstName.label}
 									id="name"
@@ -142,7 +159,11 @@ export const Contact = (): JSX.Element => {
 								/>
 
 								<Input
-									containerClassname={clsx("flex-1")}
+									containerClassname={clsx(
+										"flex-1",
+										"max-md:flex-shrink-0",
+										"max-md:w-full"
+									)}
 									type="lastname"
 									label={formContainer.form.lastName.label}
 									id="lastname"
@@ -231,12 +252,13 @@ export const Contact = (): JSX.Element => {
 					"min-w-[250px]",
 					"flex",
 					"flex-[0.6]",
-					"max-md:flex-1",
 					"flex-col",
 					"flex-shrink-0",
 					"gap-y-4",
-					"border-2",
-					"border-blue-600"
+					"rounded-2xl",
+					"overflow-hidden",
+					"max-md:flex-1",
+					"max-md:h-auto"
 				)}
 			>
 				<Slider items={opinions} />

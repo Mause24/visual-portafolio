@@ -14,6 +14,8 @@ export const Slider = <T extends SliderItemProps>(
 		handleChangeIndex,
 		handleMoveNext,
 		handleMovePrevious,
+		sliderRef,
+		isMobileScreen,
 	} = useSlider(props)
 
 	return (
@@ -21,44 +23,52 @@ export const Slider = <T extends SliderItemProps>(
 			className={clsx(
 				"w-full",
 				"h-full",
-				"border-2",
 				"flex",
 				"relative",
 				"overflow-x-hidden"
 			)}
 		>
-			<Button
-				variant="transparent"
+			{!isMobileScreen && (
+				<Button
+					variant="transparent"
+					className={clsx(
+						"w-8",
+						"h-full",
+						"flex",
+						"justify-center",
+						"items-center",
+						"absolute",
+						"top-0",
+						"left-0"
+					)}
+					onClick={handleMovePrevious}
+					rightIcon={<FaChevronLeft />}
+				/>
+			)}
+			<div
+				ref={sliderRef}
 				className={clsx(
-					"w-8",
 					"h-full",
 					"flex",
-					"justify-center",
-					"items-center",
-					"absolute",
-					"top-0",
-					"left-0"
+					"overflow-x-scroll",
+					"no-scrollbar",
+					"snap-x",
+					"snap-mandatory"
 				)}
-				onClick={handleMovePrevious}
-				rightIcon={<FaChevronLeft />}
-			/>
-			<div className={clsx("h-full", "flex", "overflow-x-visible")}>
+			>
 				{items.map(item => (
 					<div
 						key={String(item.id)}
 						className={clsx(
 							"w-full",
 							"h-full",
+							"snap-center",
 							"flex",
 							"flex-shrink-0"
 						)}
 					>
 						<img
-							className={clsx(
-								"w-full",
-								"h-full",
-								"object-contain"
-							)}
+							className={clsx("w-full", "h-full", "object-cover")}
 							src={item.image}
 							alt={`slideImage-${item.id}`}
 						/>
@@ -81,21 +91,23 @@ export const Slider = <T extends SliderItemProps>(
 					onChangeIndex={handleChangeIndex}
 				/>
 			</div>
-			<Button
-				variant="transparent"
-				className={clsx(
-					"w-8",
-					"h-full",
-					"flex",
-					"justify-center",
-					"items-center",
-					"absolute",
-					"top-0",
-					"right-0"
-				)}
-				onClick={handleMoveNext}
-				rightIcon={<FaChevronRight />}
-			/>
+			{!isMobileScreen && (
+				<Button
+					variant="transparent"
+					className={clsx(
+						"w-8",
+						"h-full",
+						"flex",
+						"justify-center",
+						"items-center",
+						"absolute",
+						"top-0",
+						"right-0"
+					)}
+					onClick={handleMoveNext}
+					rightIcon={<FaChevronRight />}
+				/>
+			)}
 		</div>
 	)
 }

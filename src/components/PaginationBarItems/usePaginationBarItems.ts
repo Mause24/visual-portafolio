@@ -60,29 +60,29 @@ export const usePaginationBarItems = (props: PaginationBarItemsProps) => {
 
 	const renderPages = useMemo(() => {
 		const parseArrayIndex = (
-			array: { key: string; value: number }[]
-		): { key: string; value: string | number }[] => {
+			array: { key: string; value: number; label: string }[]
+		): { key: string; value: string | number; label: string }[] => {
 			switch (true) {
 				case array.length < 11:
 					return array
 				case currentIndex <= 5:
 					return [
 						...array.filter(item => item.value <= 7),
-						{ key: "idk-1", value: "..." },
+						{ key: "idk-1", value: "...", label: "..." },
 						...array.slice(array.length - 2),
 					]
 				case currentIndex > 5 && currentIndex < array.length - 4:
 					return [
 						...array.slice(0, 2),
-						{ key: "idk-1", value: "..." },
+						{ key: "idk-1", value: "...", label: "..." },
 						...array.slice(currentIndex - 3, currentIndex + 2),
-						{ key: "idk-2", value: "..." },
+						{ key: "idk-2", value: "...", label: "..." },
 						...array.slice(array.length - 2),
 					]
 				case currentIndex > array.length - 5:
 					return [
 						...array.slice(0, 2),
-						{ key: "idk-1", value: "..." },
+						{ key: "idk-1", value: "...", label: "..." },
 						...array.slice(array.length - 6),
 					]
 				default:
@@ -94,7 +94,8 @@ export const usePaginationBarItems = (props: PaginationBarItemsProps) => {
 		const pagesArray = parseArrayIndex(
 			indexArr.map(item => ({
 				key: item.toString(),
-				value: item,
+				value: item - 1,
+				label: String(item),
 			}))
 		)
 
