@@ -8,6 +8,8 @@ import { useHeader } from "./useHeader"
 export const Header = (props: HeaderProps): JSX.Element => {
 	const { links } = useHeader(props)
 
+	console.log("jijiji", links)
+
 	return (
 		<header
 			className={clsx(
@@ -33,7 +35,7 @@ export const Header = (props: HeaderProps): JSX.Element => {
 					height={20}
 				/>
 
-				<ul className="flex gap-3 list-none text-text-10 text-sm font-light ml-2 font-sans">
+				<ul className="flex gap-3 list-none text-text-10 text-sm font-light ml-2 font-sans max-md:hidden">
 					{links.map(item => (
 						<li key={item.id}>
 							<Text size="sm">{item.name}</Text>

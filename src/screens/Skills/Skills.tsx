@@ -1,22 +1,10 @@
 import { Text } from "@/components"
-import { IMAGES } from "@/Constants"
-import {
-	FaBootstrap,
-	FaCss3,
-	FaGithub,
-	FaHtml5,
-	FaJira,
-	FaReact,
-} from "react-icons/fa"
-import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri"
-import {
-	SiExpress,
-	SiJavascript,
-	SiPostman,
-	SiTypescript,
-} from "react-icons/si"
-import { TbBrandReactNative } from "react-icons/tb"
-export const Skills = () => {
+import { Category } from "./Skills.types"
+import { useSkills } from "./useSkills"
+export const Skills = (): JSX.Element => {
+	const { skillsCategories } = useSkills()
+	console.log("buenas", skillsCategories)
+
 	return (
 		<div className="flex flex-col gap-y-5 px-5 py-4 max-h-screen overflow-y-auto">
 			<Text type="h2" className="font-sans dark:text-gray-500 text-black">
@@ -27,8 +15,30 @@ export const Skills = () => {
 					Languages
 				</Text>
 			</div>
-			<div className="lg:flex lg:flex-row lg:gap-x-10 flex flex-col gap-y-5 ">
-				<div className="flex  items-center gap-6">
+			<div className="gap-y-4">
+				{skillsCategories.map((category: Category) => (
+					<div key={category.id}>
+						<h2>{category.label}</h2>
+						<ul>
+							<div className="flex gap-x-4">
+								{category.items.map(item => (
+									<li key={item.label}>
+										<div className="flex items-center gap-4">
+											<img
+												className="h-12 w-12"
+												src={item.image}
+												alt={item.label}
+											/>
+											<span>{item.label}</span>
+										</div>
+									</li>
+								))}
+							</div>
+						</ul>
+					</div>
+				))}
+
+				{/* <div className="flex  items-center gap-6">
 					<SiJavascript className="text-extensions-js" size={48} />
 					<Text className="font-sans dark:text-white">
 						JavaScript
@@ -47,9 +57,9 @@ export const Skills = () => {
 				<div className="flex  items-center gap-6">
 					<FaCss3 className="text-extensions-css" size={48} />
 					<Text className="font-sans dark:text-white">CSS3</Text>
-				</div>
+				</div> */}
 			</div>
-			<div className="py-4">
+			{/* <div className="py-4">
 				<Text type="h3" className="font-sans dark:text-gray-500">
 					Frameworks
 				</Text>
@@ -174,7 +184,7 @@ export const Skills = () => {
 					<img src={IMAGES.flutter} width={50} height={50} />
 					<Text className="font-sans dark:text-white">Flutter</Text>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	)
 }
