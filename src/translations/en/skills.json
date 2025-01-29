@@ -1,0 +1,127 @@
+{
+	"title": "skills",
+	"categories": [
+		{
+			"id": 1,
+			"label": "Languages",
+			"items": [
+				{
+					"label": "JavaScript",
+					"image": "/src/assets/images/javascript.png"
+				},
+				{
+					"label": "TypeScript",
+					"image": "/src/assets/images/Typescript.png"
+				},
+				{
+					"label": "HTML",
+					"image": "/src/assets/images/html.png"
+				},
+				{
+					"label": "CCS3",
+					"image": "/src/assets/images/css.png"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"label": "Frameworks",
+			"items": [
+				{
+					"label": "React",
+					"image": "javascript_image_url"
+				},
+				{
+					"label": "Tailwind css",
+					"image": "typescript_image_url"
+				},
+				{
+					"label": "NextJS",
+					"image": "typescript_image_url"
+				},
+				{
+					"label": "ExpressJS",
+					"image": "typescript_image_url"
+				},
+				{
+					"label": "Boostrap",
+					"image": "typescript_image_url"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"label": "Tools",
+			"items": [
+				{
+					"label": "Visual studio",
+					"image": "javascript_image_url"
+				},
+				{
+					"label": "Slack",
+					"image": "typescript_image_url"
+				},
+				{
+					"label": "Click up",
+					"image": "typescript_image_url"
+				},
+				{
+					"label": "Jira",
+					"image": "typescript_image_url"
+				},
+				{
+					"label": "Figma",
+					"image": "typescript_image_url"
+				},
+				{
+					"label": "Postman",
+					"image": "typescript_image_url"
+				},
+				{
+					"label": "Git",
+					"image": "typescript_image_url"
+				}
+			]
+		},
+		{
+			"id": 4,
+			"label": "libraries",
+			"items": [
+				{
+					"label": "Axios",
+					"image": "javascript_image_url"
+				},
+				{
+					"label": "React Router Dom",
+					"image": "typescript_image_url"
+				},
+				{
+					"label": "Zustand",
+					"image": "typescript_image_url"
+				},
+				{
+					"label": "Redux",
+					"image": "typescript_image_url"
+				},
+				{
+					"label": "Material Ui",
+					"image": "typescript_image_url"
+				}
+			]
+		},
+		{
+			"id": 5,
+			"label": "Mobile",
+			"items": [
+				{
+					"label": "React Native",
+					"image": "javascript_image_url"
+				},
+				{
+					"label": "Flutter  ",
+					"image": "typescript_image_url"
+				}
+			]
+		}
+	]
+}
