@@ -29,23 +29,23 @@
 			"items": [
 				{
 					"label": "React",
-					"image": "javascript_image_url"
+					"image": "/src/assets/images/react.png"
 				},
 				{
 					"label": "Tailwind css",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/tailwind.png"
 				},
 				{
 					"label": "NextJS",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/nextjs.png"
 				},
 				{
 					"label": "ExpressJS",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/express.png"
 				},
 				{
 					"label": "Boostrap",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/bootstrap.png"
 				}
 			]
 		},
@@ -55,31 +55,31 @@
 			"items": [
 				{
 					"label": "Visual studio",
-					"image": "javascript_image_url"
+					"image": "/src/assets/images/VisualStudio.png"
 				},
 				{
 					"label": "Slack",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/slack.png"
 				},
 				{
 					"label": "Click up",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/clickup.png"
 				},
 				{
 					"label": "Jira",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/jira.png"
 				},
 				{
 					"label": "Figma",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/figma2.png"
 				},
 				{
 					"label": "Postman",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/postman.png"
 				},
 				{
 					"label": "Git",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/git.png"
 				}
 			]
 		},
@@ -89,23 +89,23 @@
 			"items": [
 				{
 					"label": "Axios",
-					"image": "javascript_image_url"
+					"image": "/src/assets/images/axios.png"
 				},
 				{
 					"label": "React Router Dom",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/router-dom.png"
 				},
 				{
 					"label": "Zustand",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/zustand.png"
 				},
 				{
 					"label": "Redux",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/redux2.png"
 				},
 				{
 					"label": "Material Ui",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/material.png"
 				}
 			]
 		},
@@ -115,11 +115,11 @@
 			"items": [
 				{
 					"label": "React Native",
-					"image": "javascript_image_url"
+					"image": "/src/assets/images/ReactNative.png"
 				},
 				{
 					"label": "Flutter  ",
-					"image": "typescript_image_url"
+					"image": "/src/assets/images/flutter.png"
 				}
 			]
 		}

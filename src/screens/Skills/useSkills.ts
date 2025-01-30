@@ -9,5 +9,6 @@ export const useSkills = () => {
 		() => t("categories", { returnObjects: true }),
 		[t("categories")]
 	)
-	return { skillsCategories }
+	const skillsTitle: string = useMemo(() => t("title"), [t])
+	return { skillsCategories, skillsTitle }
 }
