@@ -1,5 +1,5 @@
 {
-	"title": "skills",
+	"title": "Skills",
 	"categories": [
 		{
 			"id": 1,
@@ -115,7 +115,7 @@
 			"items": [
 				{
 					"label": "React Native",
-					"image": "/src/assets/images/ReactNative.png"
+					"image": "/src/assets/images/reactNative.png"
 				},
 				{
 					"label": "Flutter  ",

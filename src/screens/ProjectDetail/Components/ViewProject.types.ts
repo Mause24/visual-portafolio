@@ -12,5 +12,5 @@ export interface ProjectData {
 }
 
 export interface ViewProjectProps {
-	proyecData: ProjectData
+	projectData: ProjectData
 }

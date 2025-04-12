@@ -1,8 +1,9 @@
+import { Text } from "@/components"
 import clsx from "clsx"
 import React from "react"
 import { ViewProjectProps } from "./ViewProject.types"
 
-export const ViewProject: React.FC<ViewProjectProps> = ({ proyecData }) => {
+export const ViewProject: React.FC<ViewProjectProps> = ({ projectData }) => {
 	return (
 		<div className={clsx("p-3", "w-full")}>
 			<div className={clsx("w-full", "h-[50vh]", "relative", "grid")}>
@@ -13,8 +14,8 @@ export const ViewProject: React.FC<ViewProjectProps> = ({ proyecData }) => {
 						"rounded-xl",
 						"object-cover"
 					)}
-					alt="photo"
-					src={proyecData.backImg}
+					alt="backgroundImage"
+					src={projectData.backImg}
 				/>
 				<div
 					className={clsx(
@@ -48,27 +49,28 @@ export const ViewProject: React.FC<ViewProjectProps> = ({ proyecData }) => {
 						>
 							<img
 								alt="prueba"
-								src={proyecData.icon}
+								src={projectData.icon}
 								className={clsx("w-10", "h-10")}
 							/>
 							<p className={clsx("text-gray-300", "font-sans")}>
-								{proyecData.linkProject}
+								{projectData.linkProject}
 							</p>
 						</div>
 						<div>
 							<h1>
-								<span
+								<Text
+									type="span"
 									className={clsx(
 										"text-gray-300",
 										"font-sans",
 										"font-bold"
 									)}
 								>
-									{proyecData.title}
-								</span>
+									{projectData.title}
+								</Text>
 							</h1>
 							<p className={clsx("text-gray-400")}>
-								{proyecData.description}
+								{projectData.description}
 							</p>
 
 							<div className={clsx("flex", "flex-col")}>
@@ -79,10 +81,10 @@ export const ViewProject: React.FC<ViewProjectProps> = ({ proyecData }) => {
 										"py-2"
 									)}
 								>
-									{proyecData.secondTitle}
+									{projectData.secondTitle}
 								</h3>
 
-								{proyecData.listItems.map((item, index) => (
+								{projectData.listItems.map(item => (
 									<ul
 										className={clsx(
 											"flex",
@@ -91,7 +93,7 @@ export const ViewProject: React.FC<ViewProjectProps> = ({ proyecData }) => {
 											"list-disc",
 											"text-gray-400"
 										)}
-										key={index}
+										key={item}
 									>
 										<li>{item}</li>
 									</ul>
@@ -106,32 +108,30 @@ export const ViewProject: React.FC<ViewProjectProps> = ({ proyecData }) => {
 								)}
 							>
 								<h3 className={clsx("text-gray-300")}>
-									{proyecData.titleTecnologies}:
+									{projectData.titleTecnologies}:
 								</h3>
 								<div className="flex gap-x-2">
-									{proyecData.iconsTecnologies.map(
-										(item, index) => {
-											const imageName = item
-												.split("/")
-												.pop()
-												?.split(".")[0]
-											return (
-												<ul key={index}>
-													<li>
-														<img
-															className={clsx(
-																"h-10",
-																"w-10"
-															)}
-															src={item}
-															title={imageName}
-															alt={imageName}
-														/>
-													</li>
-												</ul>
-											)
-										}
-									)}
+									{projectData.iconsTecnologies.map(item => {
+										const imageName = item
+											.split("/")
+											.pop()
+											?.split(".")[0]
+										return (
+											<ul key={imageName}>
+												<li>
+													<img
+														className={clsx(
+															"h-10",
+															"w-10"
+														)}
+														src={item}
+														title={imageName}
+														alt={imageName}
+													/>
+												</li>
+											</ul>
+										)
+									})}
 								</div>
 							</div>
 						</div>

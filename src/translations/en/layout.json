@@ -34,7 +34,7 @@
 					"ext": "js"
 				},
 				{
-					"name": "Hobbies",
+					"name": "hobbies",
 					"route": "/hobbies",
 					"ext": "py"
 				}
@@ -44,22 +44,22 @@
 			"name": "Projects",
 			"childrens": [
 				{
-					"name": "project1",
+					"name": "project_1",
 					"route": "/projects/1",
 					"ext": "tsx"
 				},
 				{
-					"name": "project2",
+					"name": "project_2",
 					"route": "/projects/2",
 					"ext": "jsx"
 				},
 				{
-					"name": "project3",
+					"name": "project_3",
 					"route": "/projects/3",
 					"ext": "ts"
 				},
 				{
-					"name": "project4",
+					"name": "project_4",
 					"route": "/projects/4",
 					"ext": "ts"
 				}

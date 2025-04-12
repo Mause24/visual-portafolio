@@ -28,10 +28,10 @@ export const Home = (): JSX.Element => {
 							size="5xl"
 							type="h1"
 						>
-							Omar arenas
+							Omar Arenas
 						</Text>
 						<Text type="p" size="2xl" className="text-gray-500">
-							Full Stack Developer
+							Senior Full Stack Developer
 						</Text>
 					</div>
 

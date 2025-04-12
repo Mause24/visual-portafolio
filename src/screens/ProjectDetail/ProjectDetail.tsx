@@ -17,7 +17,7 @@ export const ProjectDetail = () => {
 				"overflow-y-auto"
 			)}
 		>
-			{selectedProject && <ViewProject proyecData={selectedProject} />}
+			{selectedProject && <ViewProject projectData={selectedProject} />}
 		</div>
 	)
 }

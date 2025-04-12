@@ -1,6 +1,7 @@
 import clsx from "clsx"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 import { Button } from "../Button"
+import { Text } from "../Text"
 import { PaginationBarsProps } from "./PaginationBar.type"
 import { usePaginationBar } from "./usePaginationBar"
 
@@ -57,7 +58,8 @@ export const PaginationBar = (props: PaginationBarsProps) => {
 						key={item.key}
 					>
 						{item.value === "..." || typeof item === "string" ? (
-							<span
+							<Text
+								type="span"
 								className={clsx(
 									"w-full",
 									"h-full",
@@ -67,7 +69,7 @@ export const PaginationBar = (props: PaginationBarsProps) => {
 								)}
 							>
 								{item.value}
-							</span>
+							</Text>
 						) : (
 							<Button
 								className={clsx(
