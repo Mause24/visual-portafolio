@@ -11,7 +11,7 @@ export const ItemSlider3D = ({
 	image,
 	mobileImage,
 	title,
-}: ItemSlider3DProps) => {
+}: ItemSlider3DProps): JSX.Element => {
 	const [t] = useTranslation("projects")
 	const navigate = useNavigate()
 	return (
@@ -22,7 +22,8 @@ export const ItemSlider3D = ({
 				"transition-all",
 				"duration-500",
 				"cursor-pointer",
-				"bg-light-primary-normal",
+				"bg-gray-heavy",
+				"hover:bg-light-primary-normal",
 				"dark:bg-dark-secondary-alternate",
 				"group"
 			)}
@@ -67,17 +68,22 @@ export const ItemSlider3D = ({
 						"from-transparent",
 						"to-black",
 						"opacity-0",
+						"pointer-events-none",
 						"origin-bottom",
 						"group-hover:opacity-100",
+						"group-hover:pointer-events-auto",
 						"gap-y-3",
-						"p-2"
+						"px-4",
+						"pb-2",
+						"max-md:px-3"
 					)}
 				>
 					<Text
 						className={clsx(
-							"text-white",
+							"text-dark-primary-normal",
 							"text-base",
-							"text-center"
+							"text-center",
+							"max-md:select-none"
 						)}
 						type="h3"
 					>
@@ -89,7 +95,8 @@ export const ItemSlider3D = ({
 							"text-xs",
 							"max-h-[150px]",
 							"overflow-y-auto",
-							"no-scrollbar"
+							"no-scrollbar",
+							"max-md:select-none"
 						)}
 						type="p"
 					>
@@ -99,9 +106,10 @@ export const ItemSlider3D = ({
 						className={clsx(
 							"w-36",
 							"self-center",
+							"p-0",
 							"max-md:w-full",
 							"max-md:rounded-full",
-							"p-0"
+							"max-md:select-none"
 						)}
 						onClick={() => navigate(`/projects/${id}`)}
 						variant="primary"

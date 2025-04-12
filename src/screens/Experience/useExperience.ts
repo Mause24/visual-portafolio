@@ -3,6 +3,7 @@ import { ExperienceJSON } from "@/interfaces"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useExperience = () => {
 	const [t] = useTranslation("experience")
 	const experience: TimelineItemProps[] = useMemo(() => {

@@ -1,4 +1,5 @@
 import clsx from "clsx"
+import { Text } from "../Text"
 import { useFooter } from "./useFooter"
 
 export const Footer = (): JSX.Element => {
@@ -18,7 +19,9 @@ export const Footer = (): JSX.Element => {
 			)}
 		>
 			<div className="flex gap-3 ">
-				<p className="text-white text-sm">Made in</p>
+				<Text type="p" className="text-white text-sm">
+					Made in
+				</Text>
 				<ul className="flex text-sm gap-3 list-none text-white">
 					<li>ReactJs</li>
 					<li>TypeScript</li>

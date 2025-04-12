@@ -24,7 +24,7 @@ export const MissingRoute = (): JSX.Element => {
 				404
 			</Text>
 
-			<Text color="black" type="p" size="lg" className={clsx("mb-8")}>
+			<Text type="p" size="lg" className={clsx("mb-8", "text-black")}>
 				Lo sentimos, la página que buscas no existe.
 			</Text>
 

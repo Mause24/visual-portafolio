@@ -6,7 +6,7 @@ import { useSlider3D } from "./useSlider3D"
 
 export const Slider3D = <T extends ItemSlider3DProps>(
 	props: Slider3DProps<T>
-) => {
+): JSX.Element => {
 	const { keyExtractor, renderItem, translateZHeight, items, sideLarge } =
 		useSlider3D(props)
 

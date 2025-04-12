@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom"
 import { ProjectData } from "./Components"
 import { ProjectsDetailParams } from "./ProjectDetail.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useProjectDetail = () => {
 	const params = useParams<ProjectsDetailParams>()
 	const [t] = useTranslation("projects")

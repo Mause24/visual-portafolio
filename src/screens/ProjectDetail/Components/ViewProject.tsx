@@ -52,29 +52,31 @@ export const ViewProject: React.FC<ViewProjectProps> = ({ projectData }) => {
 								src={projectData.icon}
 								className={clsx("w-10", "h-10")}
 							/>
-							<p className={clsx("text-gray-300", "font-sans")}>
+							<Text
+								type="p"
+								className={clsx("text-gray-300", "font-sans")}
+							>
 								{projectData.linkProject}
-							</p>
+							</Text>
 						</div>
 						<div>
-							<h1>
-								<Text
-									type="span"
-									className={clsx(
-										"text-gray-300",
-										"font-sans",
-										"font-bold"
-									)}
-								>
-									{projectData.title}
-								</Text>
-							</h1>
-							<p className={clsx("text-gray-400")}>
+							<Text
+								type="h1"
+								className={clsx(
+									"text-gray-300",
+									"font-sans",
+									"font-bold"
+								)}
+							>
+								{projectData.title}
+							</Text>
+							<Text type="p" className={clsx("text-gray-400")}>
 								{projectData.description}
-							</p>
+							</Text>
 
 							<div className={clsx("flex", "flex-col")}>
-								<h3
+								<Text
+									type="h3"
 									className={clsx(
 										"text-gray-300",
 										"font-semibold",
@@ -82,7 +84,7 @@ export const ViewProject: React.FC<ViewProjectProps> = ({ projectData }) => {
 									)}
 								>
 									{projectData.secondTitle}
-								</h3>
+								</Text>
 
 								{projectData.listItems.map(item => (
 									<ul
@@ -107,32 +109,33 @@ export const ViewProject: React.FC<ViewProjectProps> = ({ projectData }) => {
 									"mt-2"
 								)}
 							>
-								<h3 className={clsx("text-gray-300")}>
+								<Text
+									type="h3"
+									className={clsx("text-gray-300")}
+								>
 									{projectData.titleTecnologies}:
-								</h3>
-								<div className="flex gap-x-2">
+								</Text>
+								<ul className="flex gap-x-2">
 									{projectData.iconsTecnologies.map(item => {
 										const imageName = item
 											.split("/")
 											.pop()
 											?.split(".")[0]
 										return (
-											<ul key={imageName}>
-												<li>
-													<img
-														className={clsx(
-															"h-10",
-															"w-10"
-														)}
-														src={item}
-														title={imageName}
-														alt={imageName}
-													/>
-												</li>
-											</ul>
+											<li key={imageName}>
+												<img
+													className={clsx(
+														"h-10",
+														"w-10"
+													)}
+													src={item}
+													title={imageName}
+													alt={imageName}
+												/>
+											</li>
 										)
 									})}
-								</div>
+								</ul>
 							</div>
 						</div>
 					</div>

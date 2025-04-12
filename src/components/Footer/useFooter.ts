@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useFooter = () => {
 	const [currentTime, setCurrentTime] = useState(new Date())
 	useEffect(() => {
@@ -7,7 +8,7 @@ export const useFooter = () => {
 			setCurrentTime(new Date())
 		}, 1000)
 
-		return () => clearInterval(intervalId)
+		return (): void => clearInterval(intervalId)
 	}, [])
 	return { currentTime }
 }

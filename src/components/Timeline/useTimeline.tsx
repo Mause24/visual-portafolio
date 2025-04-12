@@ -7,6 +7,7 @@ import { TimelineItem, TimelineItemProps } from "./components"
 
 export const useTimeline = <T extends TimelineItemProps>(
 	props: TimelineProps<T>
+	// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 ) => {
 	const {
 		data,
