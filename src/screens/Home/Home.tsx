@@ -17,7 +17,7 @@ export const Home = (): JSX.Element => {
 				"justify-center"
 			)}
 		>
-			<div className="grid grid-cols-2 ">
+			<div className="lg:grid grid-cols-2  ">
 				<div className="flex flex-col gap-6 col-span-1">
 					<div className="flex flex-col ">
 						<Text
@@ -146,7 +146,16 @@ export const Home = (): JSX.Element => {
 						</Link>
 					</div>
 				</div>
-				<div className="flex flex-col justify-center col-span-1">
+				<div
+					className={clsx(
+						"flex",
+						"flex-col",
+						"justify-center",
+						"col-span-1",
+						"lg:mt-0",
+						"mt-3"
+					)}
+				>
 					<Text
 						className={clsx(
 							"text-gray-500",

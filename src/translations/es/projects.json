@@ -27,5 +27,18 @@
 			"description": "Es un proyecto desarrollado en React, usando tenicas de estandarizacion de clases como BEM e implementando preprocesadores de estilos como SASS para replicar la estructura identica de una busqueda en Google"
 		}
 	],
-	"linkButton": "Ir"
+	"linkButton": "Ir",
+	"projectData": [
+		{
+			"id": 1,
+			"backImg": "https://images.wallpapersden.com/image/download/lionel-messi-footballer_am1taG6UmZqaraWkpJRmZWdprWpsaw.jpg",
+			"title": "Prueba de titulo del proyecto",
+			"description": "Es un proyecto desarrollado en React, usando tenicas de estandarizacion de clases como BEM e implementando preprocesadores de estilos como SASS para replicar la estructura identica de una busqueda en Google",
+			"icon": "ruta/icon",
+			"linkProject": "link del proyecto",
+			"secondTitle": "subtitulo segundo",
+			"listItems": ["prueba1", "prueba2", "prueba3"],
+			"titleTecnologies": "nombres de las tecnologias"
+		}
+	]
 }
