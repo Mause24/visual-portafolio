@@ -13,6 +13,7 @@ import { PiWarningCircleFill } from "react-icons/pi"
 import { SiTypescript } from "react-icons/si"
 import { ItemListProps } from "./ItemList.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useItemList = (props: ItemListProps) => {
 	const { name, className, ext, route } = props
 

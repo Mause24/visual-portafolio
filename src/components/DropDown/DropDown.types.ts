@@ -9,6 +9,7 @@ export interface ItemsDropDown {
 export interface DropDownProps {
 	items: ItemsDropDown[]
 	isOpen?: boolean
-	onChangeDropDown?: () => void
+	closeBackdrop?: boolean
+	onChangeDropDown?: (value: boolean) => void
 	children: JSX.Element
 }

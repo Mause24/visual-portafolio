@@ -6,7 +6,7 @@ export const useThemeStore = create<ThemeStoreProps>((set, get) => {
 		localStorage.getItem("theme") ?? "light"
 	) as keyof typeof Themes
 
-	const changeTheme = (newTheme: keyof typeof Themes) => {
+	const changeTheme = (newTheme: keyof typeof Themes): void => {
 		const { theme } = get()
 
 		document.documentElement.classList.remove(theme)
@@ -19,7 +19,7 @@ export const useThemeStore = create<ThemeStoreProps>((set, get) => {
 	const toggleTheme = (
 		firstTheme: keyof typeof Themes,
 		secondTheme: keyof typeof Themes
-	) => {
+	): keyof typeof Themes | undefined => {
 		try {
 			if (firstTheme === secondTheme)
 				throw new Error("equals themes cannot be toggled")

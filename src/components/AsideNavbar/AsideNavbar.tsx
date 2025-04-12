@@ -5,7 +5,7 @@ import { Button } from "../Button"
 import { Dropdown } from "../DropDown"
 import { GroupItem, ItemList } from "./components"
 import { useAsideNavbar } from "./useAsideNavbar"
-export const AsideNavbar = () => {
+export const AsideNavbar = (): JSX.Element => {
 	const {
 		hadleSideBar,
 		menuSideBar,
@@ -65,6 +65,7 @@ export const AsideNavbar = () => {
 				</Button>
 				<div className={clsx("flex", "flex-col")}>
 					<Dropdown
+						closeBackdrop
 						items={settings}
 						isOpen={isOpenSettings}
 						key={String(isOpenSettings)}
@@ -75,7 +76,12 @@ export const AsideNavbar = () => {
 							onClick={toggleSettingsDropdown}
 						>
 							<VscSettingsGear
-								className={clsx("h-full", "w-full")}
+								className={clsx(
+									"h-full",
+									"w-full",
+									"text-light-secondary-alternate",
+									"dark:text-gray-xlight"
+								)}
 							/>
 						</Button>
 					</Dropdown>

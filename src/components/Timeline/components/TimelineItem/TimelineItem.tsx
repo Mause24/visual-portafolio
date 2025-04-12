@@ -3,7 +3,7 @@ import clsx from "clsx"
 import { TimelineItemProps } from "./TimelineItem.types"
 import { useTimelineItem } from "./useTimelineItem"
 
-export const TimelineItem = (props: TimelineItemProps) => {
+export const TimelineItem = (props: TimelineItemProps): JSX.Element => {
 	const { description, title, endDate, startDate, i18next, t } =
 		useTimelineItem(props)
 

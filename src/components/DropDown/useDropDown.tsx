@@ -5,42 +5,42 @@ import { Button } from "../Button"
 import { Dropdown } from "./DropDown"
 import { DropDownProps, ItemsDropDown } from "./DropDown.types"
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useDropDown = (props: DropDownProps) => {
-	const { isOpen = false, children, items, onChangeDropDown } = props
+	const {
+		isOpen = false,
+		children,
+		items,
+		onChangeDropDown,
+		closeBackdrop,
+	} = props
 
 	const [isOpenDropDown, setIsOpenDropDown] = useState(isOpen)
 	const [hovering, setHovering] = useState<number | null>(null)
 
-	const handleHovering = (index: number | null) => () => {
+	const handleHovering = (index: number | null) => (): void => {
 		setHovering(index)
 	}
 
-	const toggleDropDown = () => {
+	const toggleDropDown = (): void => {
 		setIsOpenDropDown(!isOpenDropDown)
-		onChangeDropDown?.()
+		onChangeDropDown?.(isOpenDropDown)
 	}
 
-	const renderItems = (items: ItemsDropDown[]) => {
+	const renderItems = (items: ItemsDropDown[]): JSX.Element[] => {
 		return items.map((item, index) =>
 			item.childs && item.childs?.length > 0 ? (
 				<Button
+					key={`${item.value}-${String(hovering)}`}
 					type="button"
 					variant="transparent"
 					onMouseEnter={handleHovering(index)}
 					onMouseLeave={handleHovering(null)}
 				>
-					<Dropdown
-						key={`${item.value}-${String(hovering)}`}
-						items={item.childs}
-						isOpen={hovering === index}
-					>
-						<Button
-							variant="transparent"
-							type="button"
-							className=" flex w-full !justify-start px-4 py-2 text-sm dark:text-white hover:bg-light-primary-normal hover:text-white rounded-none"
-						>
+					<Dropdown items={item.childs} isOpen={hovering === index}>
+						<div className="cursor-pointer flex w-full !justify-start px-4 py-2 text-sm dark:text-white hover:bg-light-primary-normal hover:text-white rounded-none">
 							{item.label}
-						</Button>
+						</div>
 					</Dropdown>
 				</Button>
 			) : (
@@ -54,18 +54,16 @@ export const useDropDown = (props: DropDownProps) => {
 					}}
 				>
 					{item.isSelected ? (
-						<>
-							<div
-								className={clsx(
-									"flex",
-									"w-full",
-									"justify-between",
-									"items-center"
-								)}
-							>
-								{item.label} <FaCheck />
-							</div>
-						</>
+						<div
+							className={clsx(
+								"flex",
+								"w-full",
+								"justify-between",
+								"items-center"
+							)}
+						>
+							{item.label} <FaCheck />
+						</div>
 					) : (
 						<div>{item.label}</div>
 					)}
@@ -79,6 +77,8 @@ export const useDropDown = (props: DropDownProps) => {
 		children,
 		items,
 		toggleDropDown,
+		setIsOpenDropDown,
 		renderItems,
+		closeBackdrop,
 	}
 }

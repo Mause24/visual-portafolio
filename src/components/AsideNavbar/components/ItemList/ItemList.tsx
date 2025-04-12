@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { ItemListProps } from "./ItemList.types"
 import { useItemList } from "./useItemList"
 
-export const ItemList = (props: ItemListProps) => {
+export const ItemList = (props: ItemListProps): JSX.Element => {
 	const { Icon, className, title, route } = useItemList(props)
 
 	return (

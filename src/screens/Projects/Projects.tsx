@@ -4,7 +4,7 @@ import clsx from "clsx"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
-export const Projects = () => {
+export const Projects = (): JSX.Element => {
 	const [t] = useTranslation("projects")
 	const projectsPreview: ProjectsJSON[] = useMemo(
 		() => t("projectsPreview", { returnObjects: true }),

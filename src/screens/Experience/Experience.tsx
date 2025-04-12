@@ -1,7 +1,7 @@
 import { Timeline, TimelineItem } from "@/components"
 import clsx from "clsx"
 import { useExperience } from "./useExperience"
-export const Experience = () => {
+export const Experience = (): JSX.Element => {
 	const { experience } = useExperience()
 
 	return (
