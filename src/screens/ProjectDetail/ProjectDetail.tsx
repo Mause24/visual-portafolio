@@ -5,7 +5,6 @@ import { useProjectDetail } from "./useProjectDetail"
 export const ProjectDetail = () => {
 	const { projectId, projectData } = useProjectDetail()
 	const selectedProject = projectData.find(i => String(i.id) === projectId)
-	console.log(selectedProject)
 
 	return (
 		<div

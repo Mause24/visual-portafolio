@@ -8,8 +8,6 @@ import { useHeader } from "./useHeader"
 export const Header = (props: HeaderProps): JSX.Element => {
 	const { links } = useHeader(props)
 
-	console.log("jijiji", links)
-
 	return (
 		<header
 			className={clsx(

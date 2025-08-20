@@ -1,19 +1,18 @@
 import clsx from "clsx"
 import { times } from "lodash"
-import { useMemo, useState } from "react"
-import { PaginationBarVariants } from "../PaginationBar/PaginationBar.type"
+import { useMemo } from "react"
+import { PaginationBarVariants } from "../PaginationBar/PaginationBar.types"
 import { PaginationBarItemsProps } from "./PaginationBarItems.types"
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const usePaginationBarItems = (props: PaginationBarItemsProps) => {
 	const {
-		index,
+		index = 0,
 		onChangeIndex,
 		size,
 		variants = "primary",
 		className,
 	} = props
-	const [currentIndex, setCurrentIndex] = useState(index ?? 0)
 	const currentSize = useMemo(() => size ?? 10, [size])
 
 	const paginationBarItemsVariantsStyles: {
@@ -65,21 +64,21 @@ export const usePaginationBarItems = (props: PaginationBarItemsProps) => {
 			switch (true) {
 				case array.length < 11:
 					return array
-				case currentIndex <= 5:
+				case index <= 5:
 					return [
 						...array.filter(item => item.value <= 7),
 						{ key: "idk-1", value: "...", label: "..." },
 						...array.slice(array.length - 2),
 					]
-				case currentIndex > 5 && currentIndex < array.length - 4:
+				case index > 5 && index < array.length - 4:
 					return [
 						...array.slice(0, 2),
 						{ key: "idk-1", value: "...", label: "..." },
-						...array.slice(currentIndex - 3, currentIndex + 2),
+						...array.slice(index - 3, index + 2),
 						{ key: "idk-2", value: "...", label: "..." },
 						...array.slice(array.length - 2),
 					]
-				case currentIndex > array.length - 5:
+				case index > array.length - 5:
 					return [
 						...array.slice(0, 2),
 						{ key: "idk-1", value: "...", label: "..." },
@@ -100,17 +99,12 @@ export const usePaginationBarItems = (props: PaginationBarItemsProps) => {
 		)
 
 		return pagesArray
-	}, [currentSize, currentIndex])
-
-	const onPagination = (index: number) => (): void => {
-		onChangeIndex?.(index)
-		setCurrentIndex(index)
-	}
+	}, [currentSize, index])
 
 	return {
 		renderPages,
-		onPagination,
-		currentIndex,
+		onChangeIndex,
+		index,
 		currentSize,
 		paginationBarItemsVariantsStyles,
 		variants,

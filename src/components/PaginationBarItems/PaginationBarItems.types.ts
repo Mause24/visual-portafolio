@@ -1,4 +1,4 @@
-import { PaginationBarVariants } from "../PaginationBar/PaginationBar.type"
+import { PaginationBarVariants } from "../PaginationBar/PaginationBar.types"
 
 export interface PaginationBarItemsProps {
 	index?: number

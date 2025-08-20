@@ -15,7 +15,6 @@ export const useProjectDetail = () => {
 		const currentObject: ProjectData[] = t("projectData", {
 			returnObjects: true,
 		})
-		console.log(currentObject)
 
 		return currentObject.map(item => ({
 			id: item.id,

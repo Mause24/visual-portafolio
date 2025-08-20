@@ -29,10 +29,11 @@ export const Contact = (): JSX.Element => {
 				"h-full",
 				"justify-center",
 				"items-center",
-				"overflow-hidden",
+				"overflow-y-auto",
 				"gap-3",
 				"p-3",
-				"flex-wrap"
+				"flex-wrap",
+				"max-h-full"
 			)}
 		>
 			<div
@@ -260,7 +261,7 @@ export const Contact = (): JSX.Element => {
 					"max-md:h-auto"
 				)}
 			>
-				<Slider items={opinions} />
+				<Slider classname={clsx("max-md:h-screen")} items={opinions} />
 			</div>
 		</div>
 	)

@@ -16,6 +16,7 @@ export const MessageModal = (props: MessageModalProps): JSX.Element => {
 		handleAccept,
 		handleDismiss,
 	} = useMessageModal(props)
+
 	return (
 		<CustomModal
 			className="flex justify-center items-center"

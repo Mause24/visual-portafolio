@@ -9,4 +9,5 @@ export interface SliderProps<T extends SliderItemProps> {
 	onChangeIndex?: (value: number) => void
 	onPressNext?: (value?: number) => void
 	onPressPrevious?: (value?: number) => void
+	classname?: string
 }
