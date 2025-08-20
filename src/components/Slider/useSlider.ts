@@ -4,10 +4,17 @@ import { SliderItemProps, SliderProps } from "./Slider.types"
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const useSlider = <T extends SliderItemProps>(props: SliderProps<T>) => {
-	const { items, index, onChangeIndex, onPressNext, onPressPrevious } = props
+	const {
+		items,
+		index = 0,
+		onChangeIndex,
+		onPressNext,
+		onPressPrevious,
+		classname,
+	} = props
 	const { isMobileScreen } = useMobileScreen({})
 	const sliderRef = useRef<HTMLDivElement>(null)
-	const [currentIndex, setCurrentIndex] = useState(index ?? 0)
+	const [currentIndex, setCurrentIndex] = useState(index)
 
 	const handleChangeIndex = useCallback(
 		(value: number) => {
@@ -42,8 +49,9 @@ export const useSlider = <T extends SliderItemProps>(props: SliderProps<T>) => {
 		const handleSwipe = (ev: Event): void => {
 			const currentSlider = ev.currentTarget as HTMLDivElement
 			const currentSliderWidth = currentSlider.clientWidth
+
 			setCurrentIndex(
-				Math.min(currentSlider.scrollLeft / currentSliderWidth)
+				Math.floor(currentSlider.scrollLeft / currentSliderWidth)
 			)
 		}
 
@@ -61,6 +69,7 @@ export const useSlider = <T extends SliderItemProps>(props: SliderProps<T>) => {
 		handleChangeIndex,
 		handleMoveNext,
 		handleMovePrevious,
+		classname,
 		currentIndex,
 		sliderRef,
 		isMobileScreen,

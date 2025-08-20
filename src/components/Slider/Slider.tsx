@@ -16,6 +16,7 @@ export const Slider = <T extends SliderItemProps>(
 		handleMovePrevious,
 		sliderRef,
 		isMobileScreen,
+		classname,
 	} = useSlider(props)
 
 	return (
@@ -25,7 +26,8 @@ export const Slider = <T extends SliderItemProps>(
 				"h-full",
 				"flex",
 				"relative",
-				"overflow-x-hidden"
+				"overflow-x-hidden",
+				classname
 			)}
 		>
 			{!isMobileScreen && (
@@ -38,9 +40,12 @@ export const Slider = <T extends SliderItemProps>(
 						"justify-center",
 						"items-center",
 						"absolute",
+						"z-10",
 						"top-0",
-						"left-0"
+						"left-0",
+						"bg-transparent"
 					)}
+					disabled={currentIndex <= 0}
 					onClick={handleMovePrevious}
 					rightIcon={<FaChevronLeft />}
 				/>
@@ -49,6 +54,7 @@ export const Slider = <T extends SliderItemProps>(
 				ref={sliderRef}
 				className={clsx(
 					"h-full",
+					"w-full",
 					"flex",
 					"overflow-x-scroll",
 					"no-scrollbar",
@@ -64,11 +70,19 @@ export const Slider = <T extends SliderItemProps>(
 							"h-full",
 							"snap-center",
 							"flex",
-							"flex-shrink-0"
+							"flex-shrink-0",
+							"relative"
 						)}
 					>
 						<img
-							className={clsx("w-full", "h-full", "object-cover")}
+							className={clsx(
+								"absolute",
+								"top-0",
+								"left-0",
+								"w-full",
+								"h-full",
+								"object-cover"
+							)}
 							src={item.image}
 							alt={`slideImage-${item.id}`}
 						/>
@@ -101,9 +115,12 @@ export const Slider = <T extends SliderItemProps>(
 						"justify-center",
 						"items-center",
 						"absolute",
+						"z-10",
 						"top-0",
-						"right-0"
+						"right-0",
+						"bg-transparent"
 					)}
+					disabled={currentIndex >= items.length - 1}
 					onClick={handleMoveNext}
 					rightIcon={<FaChevronRight />}
 				/>

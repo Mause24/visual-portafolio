@@ -44,7 +44,6 @@
 			],
 			"titleTecnologies": "Technologies Used",
 			"iconsTecnologies": [
-				"/src/assets/images/react.png",
 				"/src/assets/images/css.png",
 				"/src/assets/images/javascript.png",
 				"/src/assets/images/html.png"

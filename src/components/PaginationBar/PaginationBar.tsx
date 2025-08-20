@@ -2,14 +2,14 @@ import clsx from "clsx"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 import { Button } from "../Button"
 import { PaginationBarItems } from "../PaginationBarItems"
-import { PaginationBarsProps } from "./PaginationBar.type"
+import { PaginationBarsProps } from "./PaginationBar.types"
 import { usePaginationBar } from "./usePaginationBar"
 
 export const PaginationBar = (props: PaginationBarsProps): JSX.Element => {
 	const {
 		onNext,
 		onPrevious,
-		currentIndex,
+		index,
 		paginationBarVariantsStyles,
 		variants,
 		currentSize,
@@ -26,7 +26,7 @@ export const PaginationBar = (props: PaginationBarsProps): JSX.Element => {
 		>
 			<Button
 				className={paginationBarVariantsStyles[variants].prevButton}
-				onClick={onPrevious(currentIndex)}
+				onClick={onPrevious(index)}
 				variant="transparent"
 				leftIcon={
 					<FaChevronLeft
@@ -37,14 +37,14 @@ export const PaginationBar = (props: PaginationBarsProps): JSX.Element => {
 				Previous
 			</Button>
 			<PaginationBarItems
-				key={String(currentIndex)}
-				index={currentIndex}
+				key={String(index)}
+				index={index}
 				onChangeIndex={onPagination}
 				size={currentSize}
 			/>
 			<Button
 				className={paginationBarVariantsStyles[variants].nextButton}
-				onClick={onNext(currentIndex)}
+				onClick={onNext(index)}
 				variant="transparent"
 				rightIcon={
 					<FaChevronRight

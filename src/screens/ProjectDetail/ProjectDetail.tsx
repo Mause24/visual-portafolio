@@ -5,7 +5,6 @@ import { useProjectDetail } from "./useProjectDetail"
 export const ProjectDetail = () => {
 	const { projectId, projectData } = useProjectDetail()
 	const selectedProject = projectData.find(i => String(i.id) === projectId)
-	console.log(selectedProject)
 
 	return (
 		<div
@@ -17,7 +16,7 @@ export const ProjectDetail = () => {
 				"overflow-y-auto"
 			)}
 		>
-			{selectedProject && <ViewProject proyecData={selectedProject} />}
+			{selectedProject && <ViewProject projectData={selectedProject} />}
 		</div>
 	)
 }

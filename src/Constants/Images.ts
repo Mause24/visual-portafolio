@@ -11,13 +11,13 @@ import Python from "@/assets/images/pythonLogo.png"
 import Redux from "@/assets/images/redux2.png"
 import ReactDom from "@/assets/images/router-dom.png"
 import rubyLogo from "@/assets/images/rubyLogo.png"
-import Slack from "@/assets/images/slack-48.png"
+import Slack from "@/assets/images/slack.png"
 import zustand from "@/assets/images/zustand.png"
 
 export const IMAGES = {
+	emptyMobileImage: emptyMobileImage,
 	python: Python,
 	javascript: JavaScript,
-	emptyMobileImage: emptyMobileImage,
 	slack: Slack,
 	figma: Figma,
 	clickUp: ClickUp,

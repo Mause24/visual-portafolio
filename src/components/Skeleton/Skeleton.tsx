@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import { SkeletonProps } from "./Skeleton.type"
+import { SkeletonProps } from "./Skeleton.types"
 
 export const Skeleton = ({
 	width = "5rem",
