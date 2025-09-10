@@ -35,6 +35,7 @@ export const Header = (props: HeaderProps): JSX.Element => {
 				<ul className="flex gap-3 list-none text-text-10 text-sm font-light ml-2 font-sans max-md:hidden">
 					{links.map(item => (
 						<li key={item.id}>
+							<Link to={`${item.name}`}>
 							<Text
 								className={clsx(
 									"text-black",
@@ -44,6 +45,7 @@ export const Header = (props: HeaderProps): JSX.Element => {
 							>
 								{item.name}
 							</Text>
+							</Link>
 						</li>
 					))}
 				</ul>
