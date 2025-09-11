@@ -1,12 +1,12 @@
 {
 	"header": {
 		"links": [
-			{ "id": 1, "name": "Sobre mi" },
-			{ "id": 2, "name": "Experiencia" },
-			{ "id": 3, "name": "Habilidades" },
-			{ "id": 4, "name": "Proyectos" },
-			{ "id": 5, "name": "Hablemos" },
-			{ "id": 6, "name": "Hobbies" }
+			{ "id": 1, "name": "Sobre mi", "route":"/"  },
+			{ "id": 2, "name": "Experiencia" , "route":"/experience"},
+			{ "id": 3, "name": "Habilidades" , "route":"/skills"},
+			{ "id": 4, "name": "Proyectos" , "route":"/projects"},
+			{ "id": 5, "name": "Hablemos" , "route":"/contact"},
+			{ "id": 6, "name": "Hobbies", "route":"/hobbies" }
 		]
 	},
 	"aside": [
