@@ -10,7 +10,7 @@ import { Route, Routes } from "react-router-dom"
 
 export const GeneralRouter = (): JSX.Element => {
 	return (
-		<Routes>
+		<Routes >
 			<Route path="/" element={<Home />} />
 			<Route path="/skills" element={<Skills />} />
 			<Route path="/experience" element={<Experience />} />

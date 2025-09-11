@@ -5,4 +5,5 @@ export interface HeaderProps {
 export interface HeaderLinks {
 	id: number
 	name: string
+	route: string
 }
