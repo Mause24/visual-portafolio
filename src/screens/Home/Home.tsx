@@ -46,26 +46,26 @@ export const Home = (): JSX.Element => {
 							Start
 						</Text>
 						<div className="flex flex-col ">
-							<Link to={"/"}>
+							<Link to={"/skills"}>
 								<div className="flex items-center gap-2 text-blue-500">
 									<AiOutlineFileAdd size={20} />
 									<Text> Skills ...</Text>
 								</div>
 							</Link>
 
-							<Link to={"/"}>
+							<Link to={"/projects"}>
 								<div className="flex items-center gap-2 text-blue-500">
 									<GoFileDirectory size={20} />
-									<Text> Proyects ...</Text>
+									<Text> Projects ...</Text>
 								</div>
 							</Link>
-							<Link to={"/"}>
+							<Link to={"/hobbies"}>
 								<div className="flex items-center gap-2 text-blue-500">
 									<MdNumbers size={20} />
-									<Text> Anime ...</Text>
+									<Text> Hobbies ...</Text>
 								</div>
 							</Link>
-							<Link to={"/"}>
+							<Link to={"/contact"}>
 								<div className="flex items-center gap-2 text-blue-500">
 									<AiOutlineFileAdd size={20} />
 									<Text> Get in touch ...</Text>
@@ -83,10 +83,10 @@ export const Home = (): JSX.Element => {
 						>
 							Recent
 						</Text>
-						<Link to={"/experience"}>
+						<Link to={"/skills"}>
 							<div className="flex gap-x-3">
 								<Text type="span" className="text-blue-500">
-									Blogs{" "}
+									Skills{" "}
 								</Text>
 								<Text
 									className={clsx(
@@ -94,14 +94,14 @@ export const Home = (): JSX.Element => {
 										"dark:text-gray-light"
 									)}
 								>
-									E:/OmarArenas/Blogs
+									E:/OmarArenas/Skills
 								</Text>
 							</div>
 						</Link>
-						<Link to={"/skills"}>
+						<Link to={"/projects"}>
 							<div className="flex gap-x-3">
 								<Text type="span" className="text-blue-500">
-									Gaming
+									Projects
 								</Text>
 								<Text
 									className={clsx(
@@ -110,29 +110,14 @@ export const Home = (): JSX.Element => {
 									)}
 									type="span"
 								>
-									E:/OmarArenas/Gaming
-								</Text>
-							</div>
-						</Link>
-						<Link to={"/projects"}>
-							<div className="flex gap-x-3">
-								<Text type="span" className="text-blue-500">
-									Anime
-								</Text>
-								<Text
-									className={clsx(
-										"text-gray-500",
-										"dark:text-gray-light"
-									)}
-								>
-									E:/OmarArenas/Anime
+									E:/OmarArenas/Projects
 								</Text>
 							</div>
 						</Link>
 						<Link to={"/hobbies"}>
 							<div className="flex gap-x-3">
 								<Text type="span" className="text-blue-500">
-									StartUp
+									Hobbies
 								</Text>
 								<Text
 									className={clsx(
@@ -140,7 +125,22 @@ export const Home = (): JSX.Element => {
 										"dark:text-gray-light"
 									)}
 								>
-									E:/OmarArenas/Startup
+									E:/OmarArenas/Hobbies
+								</Text>
+							</div>
+						</Link>
+						<Link to={"/experience"}>
+							<div className="flex gap-x-3">
+								<Text type="span" className="text-blue-500">
+									Experience
+								</Text>
+								<Text
+									className={clsx(
+										"text-gray-500",
+										"dark:text-gray-light"
+									)}
+								>
+									E:/OmarArenas/Experience
 								</Text>
 							</div>
 						</Link>
@@ -166,19 +166,14 @@ export const Home = (): JSX.Element => {
 					</Text>
 					<div className="flex flex-col gap-y-5">
 						<Card
-							path="link"
+							path="https://www.linkedin.com/in/omar-arenas-fullstack-developer/"
 							src="https://img.icons8.com/fluency/30/null/linkedin-circled.png"
-							title="Prueba"
+							title="LinkedIn"
 						/>
 						<Card
-							path="git"
+							path="https://github.com/Mause24"
 							src="https://img.icons8.com/3d-fluency/28/null/github.png"
-							title="Prueba"
-						/>
-						<Card
-							path="x"
-							src="https://img.icons8.com/color/28/null/twitter--v1.png"
-							title="Prueba"
+							title="GitHub"
 						/>
 					</div>
 				</div>

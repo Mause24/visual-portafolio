@@ -5,7 +5,7 @@ import { CardProps } from "./Card.types"
 
 export const Card = ({ title, src, path }: CardProps): JSX.Element => {
 	return (
-		<Link to={path}>
+		<Link to={path} target="_blank">
 			<div
 				className={clsx(
 					"bg-neutral-200",
